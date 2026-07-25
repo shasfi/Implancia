@@ -96,7 +96,7 @@
     var options = [
       { key: 'light', icon: '\u2600\uFE0F', label: 'Light', hint: null },
       { key: 'dark', icon: '\uD83C\uDF19', label: 'Dark', hint: null },
-      { key: 'system', icon: '\uD83D\uDDA5\uFE0F', label: 'System', hint: 'Matches your device' }
+      { key: 'system', icon: '\uD83D\uDDA5\uFE0F', label: 'System', hint: 'Currently: ' + (systemPrefersDark() ? 'Dark' : 'Light') }
     ];
 
     options.forEach(function (opt) {

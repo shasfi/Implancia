@@ -25,8 +25,25 @@ document.addEventListener('DOMContentLoaded', function () {
      (Products -> Orthopedic Implants -> Screws/Plates -> sub-sub links) */
   document.querySelectorAll('.has-megamenu').forEach(function (megaLi) {
     var trigger = megaLi.querySelector('.megamenu-trigger');
-    var mainBtn = megaLi.querySelector('.megamenu-main-link');
-    var subPanel = mainBtn ? document.getElementById(mainBtn.getAttribute('data-target')) : null;
+    var mainBtns = megaLi.querySelectorAll('.megamenu-main-link');
+
+    mainBtns.forEach(function (btn) {
+      var panel = document.getElementById(btn.getAttribute('data-target'));
+      if (!panel) return;
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var willExpand = !panel.classList.contains('expanded');
+        mainBtns.forEach(function (otherBtn) {
+          var otherPanel = document.getElementById(otherBtn.getAttribute('data-target'));
+          if (otherPanel && otherPanel !== panel) {
+            otherPanel.classList.remove('expanded');
+            otherBtn.setAttribute('aria-expanded', 'false');
+          }
+        });
+        panel.classList.toggle('expanded', willExpand);
+        btn.setAttribute('aria-expanded', willExpand ? 'true' : 'false');
+      });
+    });
 
     if (trigger) {
       trigger.addEventListener('click', function (e) {
@@ -36,14 +53,6 @@ document.addEventListener('DOMContentLoaded', function () {
           if (other !== megaLi) other.classList.remove('open');
         });
         megaLi.classList.toggle('open', willOpen);
-      });
-    }
-
-    if (mainBtn && subPanel) {
-      mainBtn.addEventListener('click', function (e) {
-        e.stopPropagation();
-        var expanded = subPanel.classList.toggle('expanded');
-        mainBtn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
       });
     }
 
