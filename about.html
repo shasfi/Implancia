@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+  (function(){
+    try{
+      var p = localStorage.getItem('implancia-theme') || 'system';
+      var dark = p === 'dark' || (p === 'system' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      if (dark) document.documentElement.setAttribute('data-theme','dark');
+    }catch(e){}
+  })();
+</script>
+<title>About | Implancia</title>
+<meta name="description" content="Implancia is a locally owned business based in Gujranwala, Pakistan, specializing in orthopedic and medical device implants.">
+<meta name="keywords" content="medical implants, orthopedic implants, Gujranwala medical devices, Pakistan implant manufacturer, surgical implants, orthopedic screws">
+<meta name="author" content="Implancia">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph / Social Media Meta Tags -->
+<meta property="og:title" content="About Implancia | Orthopedic Implant Manufacturer in Gujranwala, Pakistan">
+<meta property="og:description" content="Implancia is a locally owned business based in Gujranwala, Pakistan, specializing in orthopedic and medical device implants.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://implancia.com/about.html">
+<meta property="og:image" content="https://implancia.com/images/implancia-logo.png">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About Implancia | Orthopedic Implant Manufacturer in Gujranwala, Pakistan">
+<meta name="twitter:description" content="Implancia is a locally owned business based in Gujranwala, Pakistan, specializing in orthopedic and medical device implants.">
+<meta name="twitter:image" content="https://implancia.com/images/implancia-logo.png">
+
+<!-- Geo-Targeting Meta Tags -->
+<meta name="geo.region" content="PK">
+<meta name="geo.placename" content="Gujranwala">
+<meta name="ICBM" content="32.1877,74.1979">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://implancia.com/about.html">
+
+<!-- Structured Data - Organization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Implancia",
+  "url": "https://implancia.com",
+  "logo": "https://implancia.com/images/implancia-logo.png",
+  "description": "Premium manufacturer of medical implants and orthopedic screws",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Bd #B-56, Model Town, Link Road",
+    "addressLocality": "Gujranwala",
+    "postalCode": "52250",
+    "addressCountry": "PK"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+92 307 3838115",
+    "contactType": "sales"
+  }
+}
+</script>
+
+<!-- Breadcrumb Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://implancia.com/index.html" },
+    { "@type": "ListItem", "position": 2, "name": "About", "item": "https://implancia.com/about.html" }
+  ]
+}
+</script>
+
+<!-- Structured Data - FAQPage (AEO) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Where is Implancia located?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Implancia is a locally owned medical device manufacturer based in Gujranwala, Pakistan, specializing in orthopedic and medical device implants."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does Implancia manufacture?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Implancia manufactures orthopedic implants including safety locking screws, star head cortical screws, and cannulated Herbert screws in medical-grade titanium and stainless steel."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who does Implancia serve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Implancia serves hospitals, clinics, surgical centers, and distributors, delivering both standard catalog implants and custom manufacturing solutions."
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="stylesheet" href="css/fonts.min.css">
+<link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <img class="header-logo" src="images/implancia-logo.png" alt="Implancia Logo" width="285" height="38">
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li class="has-dropdown has-megamenu">
+          <button type="button" class="megamenu-trigger">Products <span class="caret">&#9662;</span></button>
+          <div class="megamenu">
+            <div class="megamenu-col megamenu-main">
+              <button type="button" class="megamenu-main-link is-active" data-target="mm-orthopedic-implants" aria-expanded="false">Orthopedic Implants <span class="megamenu-chev">&#9656;</span></button>
+            </div>
+            <div class="megamenu-col megamenu-sub" id="mm-orthopedic-implants">
+              <div class="megamenu-group">
+                <button type="button" class="megamenu-sub-heading" data-target="mm-screws" aria-expanded="false">Screws <span class="megamenu-chev">&#9656;</span></button>
+                <div class="megamenu-sub-links" id="mm-screws">
+                  <a href="products.html?category=screws">All Screws</a>
+                  <a href="products.html?category=locking-screws">Locking Screws</a>
+                  <a href="products.html?category=cortical-screws">Cortical Screws</a>
+                  <a href="products.html?category=herbert-screws">Herbert Screws</a>
+                  <a href="products.html?category=cannulated-screws">Cannulated Screws</a>
+                  <a href="products.html?category=sports-medicine">ACL / Sports Medicine Screws</a>
+                </div>
+              </div>
+              <div class="megamenu-group">
+                <button type="button" class="megamenu-sub-heading" data-target="mm-plates" aria-expanded="false">Plates <span class="megamenu-chev">&#9656;</span></button>
+                <div class="megamenu-sub-links" id="mm-plates">
+                  <a href="products.html?category=plates">All Plates</a>
+                  <a href="products.html?category=trauma">Trauma Plates</a>
+                  <a href="products.html?category=orthopedics">Orthopedic Locking Plates</a>
+                  <a href="products.html?category=veterinary">Veterinary Plates</a>
+                </div>
+              </div>
+              <div class="megamenu-group">
+                <button type="button" class="megamenu-sub-heading" data-target="mm-hip-joint" aria-expanded="false">Hip &amp; Joint Implants <span class="megamenu-chev">&#9656;</span></button>
+                <div class="megamenu-sub-links" id="mm-hip-joint">
+                  <a href="products.html?category=hip-joint">All Hip &amp; Joint Implants</a>
+                  <a href="product-detail.html?id=bipolar-hip-prosthesis-37-39mm">Bipolar Hip Prosthesis</a>
+                  <a href="product-detail.html?id=austin-moore-hip-prosthesis">Austin Moore Hip Prosthesis</a>
+                </div>
+              </div>
+              <div class="megamenu-group">
+                <button type="button" class="megamenu-sub-heading" data-target="mm-wires-pins" aria-expanded="false">Wires &amp; Pins <span class="megamenu-chev">&#9656;</span></button>
+                <div class="megamenu-sub-links" id="mm-wires-pins">
+                  <a href="products.html?category=wires-pins">All Wires &amp; Pins</a>
+                  <a href="product-detail.html?id=double-ended-kirschner-k-wire">Kirschner K-Wire</a>
+                </div>
+              </div>
+              <div class="megamenu-group">
+                <button type="button" class="megamenu-sub-heading" data-target="mm-nails" aria-expanded="false">Intramedullary Nails <span class="megamenu-chev">&#9656;</span></button>
+                <div class="megamenu-sub-links" id="mm-nails">
+                  <a href="products.html?category=nails">All Nails</a>
+                  <a href="product-detail.html?id=titanium-elastic-nails-tens">Titanium Elastic Nails (TENS)</a>
+                </div>
+              </div>
+              <div class="megamenu-group">
+                <button type="button" class="megamenu-sub-heading" data-target="mm-instruments" aria-expanded="false">Surgical Instruments <span class="megamenu-chev">&#9656;</span></button>
+                <div class="megamenu-sub-links" id="mm-instruments">
+                  <a href="products.html?category=instruments">All Instruments</a>
+                  <a href="product-detail.html?id=plate-bending-plier">Plate Bending Plier</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="offerings.html">Offerings</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <a href="#" class="btn btn-primary header-cta whatsapp-cta" data-message="Hello Implancia, I would like to get started and learn more about your orthopedic implant catalog and bulk ordering." target="_blank" rel="noopener">Get Started</a>
+
+    <div class="header-actions" id="headerActions">
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== PAGE HEADER (shoulder image banner) ===== -->
+<section class="page-header">
+  <div class="container">
+    <h1>About Implancia</h1>
+    <p>Your trusted source for advanced orthopedic and medical device solutions.</p>
+  </div>
+</section>
+
+<!-- ===== STORY / INTRO ===== -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title center">The Story Behind Implancia&rsquo;s Success</h2>
+
+    <div class="about-intro" style="margin-top:40px;">
+      <img src="images/knee-x-ray-medical-anatomy-2253047.webp" alt="Focused medical professional examining a bone x-ray image" loading="lazy">
+
+      <div>
+        <h3>Implancia is a locally owned business based in Gujranwala, Pakistan, specializing in the manufacturing of orthopedic and medical device implants.</h3>
+        <p>We offer a wide range of high-quality products designed for various surgical applications, ensuring that our customers receive only the best.</p>
+        <p>Founded with a vision to improve medical care, Implancia started its journey in medical device manufacturing with a small but passionate team dedicated to quality and reliability.</p>
+        <p>We proudly serve a diverse clientele, including hospitals, clinics, and surgical centers, delivering custom solutions that cater to their specific medical needs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CORE VALUES ===== -->
+<section class="section" style="background:var(--color-bg-alt);">
+  <div class="container">
+    <h2 class="section-title center">Our Core Values</h2>
+    <p class="section-sub center">At Implancia, we uphold values that guide our commitment to excellence and innovation in healthcare.</p>
+
+    <div class="core-values-grid">
+      <div class="core-value-card">
+        <h3>Quality</h3>
+        <p>We prioritize the highest quality materials and manufacturing processes to ensure the safety and efficacy of our medical implants.</p>
+      </div>
+      <div class="core-value-card">
+        <h3>Integrity</h3>
+        <p>We conduct our business with transparency and honesty, fostering trust with our customers, partners, and stakeholders at every step.</p>
+      </div>
+      <div class="core-value-card">
+        <h3>Innovation</h3>
+        <p>Driven by a passion for improvement, we continuously explore new solutions to enhance our product offerings and address evolving medical needs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== JOIN US CTA ===== -->
+<section class="section join-us">
+  <div class="join-overlay"></div>
+  <div class="container join-inner">
+    <h2>Join Us Today</h2>
+    <p>Become part of Implancia's journey towards excellence in medical innovation. Let's collaborate to improve patient outcomes together.</p>
+    <a href="#" class="btn btn-primary whatsapp-cta" data-message="Hello Implancia, I would like to get started and learn more about your products." target="_blank" rel="noopener">Get Started</a>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-col footer-col-1">
+      <a href="index.html" class="footer-logo-link" aria-label="Implancia Home"><img loading="lazy" class="footer-logo" src="images/IMPLANCIA-logo-e1763990920113.webp" alt="Implancia Logo" width="240" height="32"></a>
+      <p class="footer-tagline">Premium manufacturer of medical implants and orthopedic screws for surgical excellence.</p>
+    </div>
+    <div class="footer-col footer-col-2">
+      <h4 class="footer-heading">Quick Links</h4>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+        <a href="offerings.html">Offerings</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+    <div class="footer-col footer-col-3">
+      <h4 class="footer-heading">Contact</h4>
+      <div class="footer-contact">
+        <div class="footer-contact-item">📍 Bd #B-56, Model Town, Link Road, Gujranwala 52250</div>
+        <div class="footer-contact-item">📞 +92 307 3838115</div>
+        <div class="footer-contact-item">✉️ implancia2@gmail.com</div>
+      </div>
+    </div>
+    <div class="footer-col footer-col-4">
+      <h4 class="footer-heading">Follow Us</h4>
+      <div class="footer-socials">
+        <a href="#" aria-label="Facebook">FB</a>
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="LinkedIn">IN</a>
+      </div>
+      <p class="copyright">Copyright &copy; 2026 Implancia</p>
+    </div>
+  </div>
+</footer>
+
+<button id="scrollTop" class="scroll-top" aria-label="Scroll to top">&uarr;</button>
+
+<script src="js/theme.js" defer></script>
+<script src="js/script.min.js" defer></script>
+<script src="js/cart.min.js" defer></script>
+</body>
+</html>

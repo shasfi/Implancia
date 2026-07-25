@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+  (function(){
+    try{
+      var p = localStorage.getItem('implancia-theme') || 'system';
+      var dark = p === 'dark' || (p === 'system' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      if (dark) document.documentElement.setAttribute('data-theme','dark');
+    }catch(e){}
+  })();
+</script>
+
+<!-- Primary SEO Meta Tags -->
+<title>Your Cart | Implancia</title>
+<meta name="description" content="Review your selected Implancia orthopedic implants and check out directly via WhatsApp with our sales team.">
+<meta name="robots" content="noindex, follow">
+<meta name="author" content="Implancia">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Your Cart | Implancia">
+<meta property="og:description" content="Review your selected Implancia orthopedic implants and check out directly via WhatsApp.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://implancia.com/cart.html">
+<meta property="og:image" content="https://implancia.com/images/implancia-logo.png">
+
+<link rel="canonical" href="https://implancia.com/cart.html">
+
+<link rel="stylesheet" href="css/fonts.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <img class="header-logo" src="images/implancia-logo.png" alt="Implancia Logo" width="285" height="38">
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="has-dropdown has-megamenu">
+          <button type="button" class="megamenu-trigger">Products <span class="caret">&#9662;</span></button>
+          <div class="megamenu">
+            <div class="megamenu-col megamenu-main">
+              <button type="button" class="megamenu-main-link is-active" data-target="mm-orthopedic-implants" aria-expanded="false">Orthopedic Implants <span class="megamenu-chev">&#9656;</span></button>
+            </div>
+            <div class="megamenu-col megamenu-sub" id="mm-orthopedic-implants">
+              <div class="megamenu-group">
+                <button type="button" class="megamenu-sub-heading" data-target="mm-screws" aria-expanded="false">Screws <span class="megamenu-chev">&#9656;</span></button>
+                <div class="megamenu-sub-links" id="mm-screws">
+                  <a href="products.html?category=screws">All Screws</a>
+                  <a href="products.html?category=locking-screws">Locking Screws</a>
+                  <a href="products.html?category=cortical-screws">Cortical Screws</a>
+                  <a href="products.html?category=herbert-screws">Herbert Screws</a>
+                  <a href="products.html?category=cannulated-screws">Cannulated Screws</a>
+                  <a href="products.html?category=sports-medicine">ACL / Sports Medicine Screws</a>
+                </div>
+              </div>
+              <div class="megamenu-group">
+                <button type="button" class="megamenu-sub-heading" data-target="mm-plates" aria-expanded="false">Plates <span class="megamenu-chev">&#9656;</span></button>
+                <div class="megamenu-sub-links" id="mm-plates">
+                  <a href="products.html?category=plates">All Plates</a>
+                  <a href="products.html?category=trauma">Trauma Plates</a>
+                  <a href="products.html?category=orthopedics">Orthopedic Locking Plates</a>
+                  <a href="products.html?category=veterinary">Veterinary Plates</a>
+                </div>
+              </div>
+              <div class="megamenu-group">
+                <button type="button" class="megamenu-sub-heading" data-target="mm-hip-joint" aria-expanded="false">Hip &amp; Joint Implants <span class="megamenu-chev">&#9656;</span></button>
+                <div class="megamenu-sub-links" id="mm-hip-joint">
+                  <a href="products.html?category=hip-joint">All Hip &amp; Joint Implants</a>
+                  <a href="product-detail.html?id=bipolar-hip-prosthesis-37-39mm">Bipolar Hip Prosthesis</a>
+                  <a href="product-detail.html?id=austin-moore-hip-prosthesis">Austin Moore Hip Prosthesis</a>
+                </div>
+              </div>
+              <div class="megamenu-group">
+                <button type="button" class="megamenu-sub-heading" data-target="mm-wires-pins" aria-expanded="false">Wires &amp; Pins <span class="megamenu-chev">&#9656;</span></button>
+                <div class="megamenu-sub-links" id="mm-wires-pins">
+                  <a href="products.html?category=wires-pins">All Wires &amp; Pins</a>
+                  <a href="product-detail.html?id=double-ended-kirschner-k-wire">Kirschner K-Wire</a>
+                </div>
+              </div>
+              <div class="megamenu-group">
+                <button type="button" class="megamenu-sub-heading" data-target="mm-nails" aria-expanded="false">Intramedullary Nails <span class="megamenu-chev">&#9656;</span></button>
+                <div class="megamenu-sub-links" id="mm-nails">
+                  <a href="products.html?category=nails">All Nails</a>
+                  <a href="product-detail.html?id=titanium-elastic-nails-tens">Titanium Elastic Nails (TENS)</a>
+                </div>
+              </div>
+              <div class="megamenu-group">
+                <button type="button" class="megamenu-sub-heading" data-target="mm-instruments" aria-expanded="false">Surgical Instruments <span class="megamenu-chev">&#9656;</span></button>
+                <div class="megamenu-sub-links" id="mm-instruments">
+                  <a href="products.html?category=instruments">All Instruments</a>
+                  <a href="product-detail.html?id=plate-bending-plier">Plate Bending Plier</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="offerings.html">Offerings</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <a href="products.html" class="btn btn-primary header-cta">Continue Shopping</a>
+
+    <div class="header-actions" id="headerActions">
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== PAGE HERO ===== -->
+<section class="section page-hero reveal">
+  <div class="container">
+    <nav class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="separator">/</span>
+      <span class="current">Your Cart</span>
+    </nav>
+    <h1 class="page-title">Your Cart</h1>
+    <p class="page-subtitle">Review your selected products, then check out directly via WhatsApp with our sales team.</p>
+  </div>
+</section>
+
+<!-- ===== CART CONTENT ===== -->
+<section class="section reveal">
+  <div class="container">
+    <div id="cartPageRoot"></div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-col footer-col-1">
+      <a href="index.html" class="footer-logo-link" aria-label="Implancia Home"><img class="footer-logo" src="images/IMPLANCIA-logo-e1763990920113.webp" alt="Implancia Logo" width="240" height="32"></a>
+      <p class="footer-tagline">Premium manufacturer of medical implants and orthopedic screws for surgical excellence.</p>
+    </div>
+    <div class="footer-col footer-col-2">
+      <h4 class="footer-heading">Quick Links</h4>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+        <a href="offerings.html">Offerings</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+    <div class="footer-col footer-col-3">
+      <h4 class="footer-heading">Contact</h4>
+      <div class="footer-contact">
+        <div class="footer-contact-item">📍 Bd #B-56, Model Town, Link Road, Gujranwala 52250</div>
+        <div class="footer-contact-item">📞 +92 307 3838115</div>
+        <div class="footer-contact-item">✉️ implancia2@gmail.com</div>
+      </div>
+    </div>
+    <div class="footer-col footer-col-4">
+      <h4 class="footer-heading">Follow Us</h4>
+      <div class="footer-socials">
+        <a href="#" aria-label="Facebook">FB</a>
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="LinkedIn">IN</a>
+      </div>
+      <p class="copyright">Copyright &copy; 2026 Implancia</p>
+    </div>
+  </div>
+</footer>
+
+<button id="scrollTop" class="scroll-top" aria-label="Scroll to top">&uarr;</button>
+
+<script src="js/theme.js" defer></script>
+<script src="js/script.js" defer></script>
+<script src="js/cart.js" defer></script>
+<script>
+(function () {
+  function escapeHtml(str) {
+    if (!str) return '';
+    return String(str).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  function renderCartPage() {
+    var root = document.getElementById('cartPageRoot');
+    if (!root || !window.ImplanciaCart) return;
+
+    var items = window.ImplanciaCart.getItems();
+
+    if (items.length === 0) {
+      root.innerHTML =
+        '<div class="cart-empty-state">' +
+          '<h2 style="color:var(--color-navy);margin-bottom:10px;">Your cart is empty</h2>' +
+          '<p style="color:var(--color-muted);margin-bottom:24px;">Browse our orthopedic implant catalog and add products to get started.</p>' +
+          '<a href="products.html" class="btn btn-primary">Browse Products</a>' +
+        '</div>';
+      return;
+    }
+
+    var rows = items.map(function (item, idx) {
+      var price = parseFloat(String(item.price || '0').replace(/[^0-9.]/g, '')) || 0;
+      var lineTotal = price * item.qty;
+      return (
+        '<tr>' +
+          '<td>' +
+            (item.image ? '<img src="' + escapeHtml(item.image) + '" alt="' + escapeHtml(item.name) + '" style="width:56px;height:56px;object-fit:cover;border-radius:8px;margin-right:12px;vertical-align:middle;" loading="lazy">' : '') +
+            '<span class="cart-item-name">' + escapeHtml(item.name) +
+              '<span class="cart-item-meta">' + [item.material, item.diameter, item.length, item.option4].filter(Boolean).map(escapeHtml).join(' &middot; ') + '</span>' +
+            '</span>' +
+          '</td>' +
+          '<td><input type="number" min="1" class="cart-qty-input" value="' + item.qty + '" data-idx="' + idx + '"></td>' +
+          '<td>' + (item.price ? escapeHtml(item.price) : '&mdash;') + '</td>' +
+          '<td>' + (price ? '$' + lineTotal.toFixed(2) : '&mdash;') + '</td>' +
+          '<td><button type="button" class="cart-remove-btn" data-idx="' + idx + '" aria-label="Remove">&times;</button></td>' +
+        '</tr>'
+      );
+    }).join('');
+
+    var subtotal = window.ImplanciaCart.getSubtotal();
+
+    root.innerHTML =
+      '<div class="cart-page-grid">' +
+        '<div class="cart-table-wrap">' +
+          '<table class="cart-table">' +
+            '<thead><tr><th>Product</th><th>Qty</th><th>Price / Qty</th><th>Total</th><th></th></tr></thead>' +
+            '<tbody>' + rows + '</tbody>' +
+          '</table>' +
+        '</div>' +
+        '<div class="checkout-box">' +
+          '<h3>Order Summary</h3>' +
+          '<p style="color:var(--color-muted);font-size:0.85rem;">Prices shown are estimates. Final pricing is confirmed by our sales team based on quantity and delivery location.</p>' +
+          '<div class="checkout-subtotal-row"><span>Estimated Subtotal</span><span>' + (subtotal ? '$' + subtotal.toFixed(2) : '&mdash;') + '</span></div>' +
+
+          '<label for="ckName">Full Name *</label>' +
+          '<input id="ckName" type="text" placeholder="John Doe" required>' +
+          '<span class="field-error" id="ckNameError">Please enter your name.</span>' +
+
+          '<label for="ckCompany">Company / Hospital</label>' +
+          '<input id="ckCompany" type="text" placeholder="e.g. City General Hospital">' +
+
+          '<label for="ckRole">Role</label>' +
+          '<select id="ckRole">' +
+            '<option value="">Select your role</option>' +
+            '<option value="Surgeon">Surgeon</option>' +
+            '<option value="Procurement / Purchasing Manager">Procurement / Purchasing Manager</option>' +
+            '<option value="Distributor">Distributor</option>' +
+            '<option value="Hospital Administrator">Hospital Administrator</option>' +
+            '<option value="Other">Other</option>' +
+          '</select>' +
+
+          '<label for="ckEmail">Email</label>' +
+          '<input id="ckEmail" type="email" placeholder="john@example.com">' +
+
+          '<label for="ckNotes">Notes (delivery timeline, quantities, etc.)</label>' +
+          '<textarea id="ckNotes" rows="3" placeholder="Any additional details..."></textarea>' +
+
+          '<a href="#" id="whatsappCheckoutBtn" class="whatsapp-checkout-btn" target="_blank" rel="noopener">' +
+            '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.004 2c-5.523 0-10 4.477-10 10 0 1.765.464 3.482 1.345 5L2 22l5.116-1.334A9.955 9.955 0 0 0 12.004 22c5.523 0 10-4.477 10-10s-4.477-10-10-10zm0 18.15a8.14 8.14 0 0 1-4.15-1.135l-.298-.177-3.037.792.81-2.96-.194-.304A8.15 8.15 0 1 1 20.15 12a8.16 8.16 0 0 1-8.146 8.15z"/></svg>' +
+            'Checkout via WhatsApp' +
+          '</a>' +
+          '<p class="checkout-note">Tapping the button opens WhatsApp with your order pre-filled &mdash; just hit Send.</p>' +
+        '</div>' +
+      '</div>';
+
+    // Qty change
+    root.querySelectorAll('.cart-qty-input').forEach(function (input) {
+      input.addEventListener('change', function () {
+        window.ImplanciaCart.updateQty(parseInt(input.getAttribute('data-idx'), 10), input.value);
+      });
+    });
+
+    // Remove item
+    root.querySelectorAll('.cart-remove-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        window.ImplanciaCart.removeItem(parseInt(btn.getAttribute('data-idx'), 10));
+      });
+    });
+
+    // WhatsApp checkout
+    var waBtn = document.getElementById('whatsappCheckoutBtn');
+    waBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      var name = document.getElementById('ckName').value.trim();
+      var errorEl = document.getElementById('ckNameError');
+      if (!name) {
+        errorEl.style.display = 'block';
+        document.getElementById('ckName').focus();
+        return;
+      }
+      errorEl.style.display = 'none';
+
+      var customer = {
+        name: name,
+        company: document.getElementById('ckCompany').value.trim(),
+        role: document.getElementById('ckRole').value,
+        email: document.getElementById('ckEmail').value.trim(),
+        notes: document.getElementById('ckNotes').value.trim()
+      };
+
+      var link = window.ImplanciaCart.buildWhatsAppLink(customer);
+      window.open(link, '_blank', 'noopener');
+    });
+  }
+
+  window.renderCartPage = renderCartPage;
+  document.addEventListener('DOMContentLoaded', renderCartPage);
+})();
+</script>
+</body>
+</html>

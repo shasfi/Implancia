@@ -1,0 +1,9 @@
+# Implancia — robots.txt
+# Note: CSS/JS are intentionally NOT disallowed — modern search engines
+# (Google, Bing) render pages and need access to these to evaluate
+# mobile-friendliness and layout correctly.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://implancia.com/sitemap.xml
