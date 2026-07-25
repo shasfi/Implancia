@@ -21,15 +21,44 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  /* Products mega-menu: click-to-open, animated accordion
-     (Products -> Orthopedic Implants -> Screws/Plates -> sub-sub links) */
+  /* Products mega-menu: hover-to-open on desktop/mouse devices, tap-to-open
+     on touch devices (Products -> Orthopedic Implants -> Screws/Plates -> sub-sub links) */
+  var canHover = window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
   document.querySelectorAll('.has-megamenu').forEach(function (megaLi) {
     var trigger = megaLi.querySelector('.megamenu-trigger');
     var mainBtns = megaLi.querySelectorAll('.megamenu-main-link');
+    var closeTimer = null;
+
+    function openMenu() {
+      clearTimeout(closeTimer);
+      document.querySelectorAll('.has-megamenu.open').forEach(function (other) {
+        if (other !== megaLi) other.classList.remove('open');
+      });
+      megaLi.classList.add('open');
+    }
+    function scheduleClose() {
+      clearTimeout(closeTimer);
+      closeTimer = setTimeout(function () { megaLi.classList.remove('open'); }, 200);
+    }
+    function expandMainPanel(targetBtn) {
+      var panel = document.getElementById(targetBtn.getAttribute('data-target'));
+      if (!panel) return;
+      mainBtns.forEach(function (otherBtn) {
+        var otherPanel = document.getElementById(otherBtn.getAttribute('data-target'));
+        if (otherPanel && otherPanel !== panel) {
+          otherPanel.classList.remove('expanded');
+          otherBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+      panel.classList.add('expanded');
+      targetBtn.setAttribute('aria-expanded', 'true');
+    }
 
     mainBtns.forEach(function (btn) {
       var panel = document.getElementById(btn.getAttribute('data-target'));
       if (!panel) return;
+
       btn.addEventListener('click', function (e) {
         e.stopPropagation();
         var willExpand = !panel.classList.contains('expanded');
@@ -43,6 +72,13 @@ document.addEventListener('DOMContentLoaded', function () {
         panel.classList.toggle('expanded', willExpand);
         btn.setAttribute('aria-expanded', willExpand ? 'true' : 'false');
       });
+
+      if (canHover) {
+        btn.addEventListener('mouseenter', function () {
+          openMenu();
+          expandMainPanel(btn);
+        });
+      }
     });
 
     if (trigger) {
@@ -54,6 +90,14 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         megaLi.classList.toggle('open', willOpen);
       });
+      if (canHover) {
+        trigger.addEventListener('mouseenter', openMenu);
+      }
+    }
+
+    if (canHover) {
+      megaLi.addEventListener('mouseleave', scheduleClose);
+      megaLi.addEventListener('mouseenter', function () { clearTimeout(closeTimer); });
     }
 
     megaLi.querySelectorAll('.megamenu-sub-heading').forEach(function (heading) {
@@ -73,6 +117,20 @@ document.addEventListener('DOMContentLoaded', function () {
         panel.classList.toggle('expanded', willExpand);
         heading.setAttribute('aria-expanded', willExpand ? 'true' : 'false');
       });
+
+      if (canHover) {
+        heading.addEventListener('mouseenter', function () {
+          megaLi.querySelectorAll('.megamenu-sub-links.expanded').forEach(function (open) {
+            if (open !== panel) {
+              open.classList.remove('expanded');
+              var sib = megaLi.querySelector('.megamenu-sub-heading[data-target="' + open.id + '"]');
+              if (sib) sib.setAttribute('aria-expanded', 'false');
+            }
+          });
+          panel.classList.add('expanded');
+          heading.setAttribute('aria-expanded', 'true');
+        });
+      }
     });
   });
 
