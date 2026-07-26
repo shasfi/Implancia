@@ -390,7 +390,11 @@
       </div>
     </div>
     <div class="catalog-modal-body">
-      <iframe id="catalogModalFrame" src="" title="Implancia Product Catalog PDF" loading="lazy"></iframe>
+      <embed id="catalogModalFrame" src="" type="application/pdf" title="Implancia Product Catalog PDF">
+      <div class="catalog-modal-fallback" id="catalogModalFallback">
+        <p>If the catalog doesn't display above, your browser may be blocking inline PDF preview (this is common when testing the site from a local file rather than a live website).</p>
+        <a href="catalog/implancia-product-catalog.pdf" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Open Catalog in New Tab</a>
+      </div>
     </div>
   </div>
 </div>
