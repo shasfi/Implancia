@@ -46,7 +46,9 @@
    Set by theme-toggle.js (manual choice, or "system" following
    the OS/browser color-scheme preference)
 ========================================================= */
+html{color-scheme:light;}
 html[data-theme="dark"]{
+  color-scheme:dark;
   --color-primary:#4a9bff;
   --color-primary-dark:#6fb1ff;
   --color-navy:#f1f5f9;
@@ -64,6 +66,21 @@ html[data-theme="dark"] img:not(.no-dark-dim){opacity:0.92;}
 html[data-theme="dark"] .header-logo{filter:brightness(0) invert(1);}
 html[data-theme="dark"] .btn-outline{color:var(--color-navy);border-color:var(--color-border);}
 html[data-theme="dark"] .btn-outline:not(:hover){background:transparent;}
+
+/* Global safety-net: every native form control must always follow the
+   active theme's colors, so nothing goes invisible in dark mode. */
+input,select,textarea,button{
+  color:var(--color-text);
+  font-family:inherit;
+}
+input:not([type="checkbox"]):not([type="radio"]),
+select,
+textarea{
+  background:var(--color-surface);
+  color:var(--color-navy);
+}
+input::placeholder,textarea::placeholder{color:var(--color-muted);opacity:1;}
+select option{background:var(--color-surface);color:var(--color-navy);}
 
 *,*::before,*::after{box-sizing:border-box;}
 html{scroll-behavior:smooth;overflow-x:hidden;}
@@ -248,7 +265,7 @@ p{margin:0 0 16px;color:var(--color-muted);}
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:20px 0;
+  padding:12px 0;
   gap:32px;
 }
 .logo{
@@ -256,9 +273,9 @@ p{margin:0 0 16px;color:var(--color-muted);}
   align-items:center;
 }
 .header-logo{
-  height:48px;
+  height:34px;
   width:auto;
-  max-width:220px;
+  max-width:180px;
   object-fit:contain;
   transition:opacity 0.3s ease;
 }
@@ -1988,7 +2005,7 @@ p{margin:0 0 16px;color:var(--color-muted);}
 .shop-search-wrap svg{flex-shrink:0;color:var(--color-muted);}
 #shopSearchInput{
   flex:1;border:none;outline:none;font-family:'Inter',sans-serif;
-  font-size:0.95rem;padding:8px 0;background:transparent;
+  font-size:0.95rem;padding:8px 0;background:transparent;color:var(--color-navy);
 }
 #shopSearchClear{
   border:none;background:var(--color-bg-alt);color:var(--color-muted);
