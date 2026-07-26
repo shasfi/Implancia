@@ -29,6 +29,7 @@ const PRODUCTS_PRICING = {
       { value: 'titanium', label: 'Titanium (Ti-6Al-4V)', modifier: 0.5 }
     ],
     diameter: [
+      { value: 'all', label: 'All Diameters', modifier: 0 },
       { value: '2.4', label: '2.4 mm', modifier: 0, lengths: [
         { value: '6', label: '6 mm', modifier: 0 },
         { value: '8', label: '8 mm', modifier: 0 },
@@ -139,6 +140,7 @@ const PRODUCTS_PRICING = {
       { value: 'titanium', label: 'Titanium Grade (Ti-6Al-4V)', modifier: 0.5 }
     ],
     diameter: [
+      { value: 'all', label: 'All Diameters', modifier: 0 },
       { value: '2.0', label: '2.0 mm', modifier: 0, lengths: [
         { value: '6', label: '6 mm', modifier: 0 },
         { value: '8', label: '8 mm', modifier: 0 },
@@ -281,12 +283,13 @@ const PRODUCTS_PRICING = {
   },
   'cannulated-herbert-screw': {
     basePrice: 1.99,
-    optionLabels: { material: 'Material', diameter: 'Diameter', option3: 'Length', option4: 'Packaging' },
+    optionLabels: { material: 'Material', diameter: 'Diameter', option3: 'Length', option4: 'Packaging & Sterility' },
     material: [
       { value: 'stainless-steel', label: 'Stainless Steel 316L', modifier: 0 },
       { value: 'titanium', label: 'Titanium Grade (Ti-6Al-4V)', modifier: 2 }
     ],
     diameter: [
+      { value: 'all', label: 'All Diameters', modifier: 0 },
       { value: '2.0', label: '2.0 mm', modifier: 0, lengths: [
         { value: '10', label: '10 mm', modifier: 0 },
         { value: '12', label: '12 mm', modifier: 0 },
@@ -427,8 +430,8 @@ const PRODUCTS_PRICING = {
       ] }
     ],
     option4: [
-      { value: 'bulk', label: 'Bulk Non-Sterile', modifier: 0 },
-      { value: 'sterile', label: 'Individually Sterile-Packed', modifier: 1 }
+      { value: 'bulk', label: 'Standard Packing (Non-Sterile, Bulk Box)', modifier: 0 },
+      { value: 'sterile', label: 'Sterile Packing (Individually Wrapped, Ready for OR)', modifier: 1 }
     ]
   },
 
@@ -444,10 +447,12 @@ const PRODUCTS_PRICING = {
       { value: 'titanium', label: 'Titanium (Ti-6Al-4V)', modifier: 7 }
     ],
     diameter: [
+      { value: 'all', label: 'All Diameters', modifier: 0 },
       { value: '4.5', label: '4.5 mm', modifier: 0 },
       { value: '5.0', label: '5.0 mm', modifier: 0 }
     ],
     option3: [
+      { value: 'all', label: 'All Hole Configurations', modifier: 0 },
       { value: '4', label: '4 Holes', modifier: 0 },
       { value: '6', label: '6 Holes', modifier: 8 },
       { value: '8', label: '8 Holes', modifier: 16 },
@@ -470,6 +475,7 @@ const PRODUCTS_PRICING = {
       { value: '2.7', label: '2.7 mm', modifier: 0 }
     ],
     option3: [
+      { value: 'all', label: 'All Hole Configurations', modifier: 0 },
       { value: '4', label: '4 Holes', modifier: 0 },
       { value: '5', label: '5 Holes', modifier: 8 },
       { value: '6', label: '6 Holes', modifier: 16 },
@@ -477,13 +483,14 @@ const PRODUCTS_PRICING = {
       { value: '8', label: '8 Holes', modifier: 32 }
     ],
     option4: [
+      { value: 'all', label: 'All Sides (Left + Right)', modifier: 0 },
       { value: 'left', label: 'Left', modifier: 0 },
       { value: 'right', label: 'Right', modifier: 0 }
     ]
   },
   'proximal-humeral-locking-plate-3-5mm': {
     basePrice: 20,
-    optionLabels: { material: 'Material', diameter: 'Diameter', option3: 'Holes', option4: 'Packaging' },
+    optionLabels: { material: 'Material', diameter: 'Diameter', option3: 'Holes', option4: 'Packaging & Sterility' },
     material: [
       { value: 'stainless-steel', label: 'Stainless Steel 316L', modifier: 0 },
       { value: 'titanium', label: 'Titanium (Ti-6Al-4V)', modifier: 7 }
@@ -492,6 +499,7 @@ const PRODUCTS_PRICING = {
       { value: '3.5', label: '3.5 mm', modifier: 0 }
     ],
     option3: [
+      { value: 'all', label: 'All Hole Configurations', modifier: 0 },
       { value: '3', label: '3 Holes', modifier: 0 },
       { value: '4', label: '4 Holes', modifier: 8 },
       { value: '5', label: '5 Holes', modifier: 16 },
@@ -499,8 +507,8 @@ const PRODUCTS_PRICING = {
       { value: '8', label: '8 Holes', modifier: 32 }
     ],
     option4: [
-      { value: 'bulk', label: 'Bulk Non-Sterile', modifier: 0 },
-      { value: 'sterile', label: 'Individually Sterile-Packed', modifier: 1 }
+      { value: 'bulk', label: 'Standard Packing (Non-Sterile, Bulk Box)', modifier: 0 },
+      { value: 'sterile', label: 'Sterile Packing (Individually Wrapped, Ready for OR)', modifier: 1 }
     ]
   },
   'clavicle-s-safety-locking-plate-3-5mm': {
@@ -514,6 +522,7 @@ const PRODUCTS_PRICING = {
       { value: '3.5', label: '3.5 mm', modifier: 0 }
     ],
     option3: [
+      { value: 'all', label: 'All Hole Configurations', modifier: 0 },
       { value: '6', label: '6 Holes', modifier: 0 },
       { value: '7', label: '7 Holes', modifier: 8 },
       { value: '8', label: '8 Holes', modifier: 16 },
@@ -521,13 +530,14 @@ const PRODUCTS_PRICING = {
       { value: '10', label: '10 Holes', modifier: 32 }
     ],
     option4: [
+      { value: 'all', label: 'All Sides (Left + Right)', modifier: 0 },
       { value: 'left', label: 'Left', modifier: 0 },
       { value: 'right', label: 'Right', modifier: 0 }
     ]
   },
   'one-third-tubular-locking-plate': {
     basePrice: 9,
-    optionLabels: { material: 'Material', diameter: 'Diameter', option3: 'Holes', option4: 'Packaging' },
+    optionLabels: { material: 'Material', diameter: 'Diameter', option3: 'Holes', option4: 'Packaging & Sterility' },
     material: [
       { value: 'stainless-steel', label: 'Stainless Steel 316L', modifier: 0 },
       { value: 'titanium', label: 'Titanium (Ti-6Al-4V)', modifier: 4 }
@@ -536,6 +546,7 @@ const PRODUCTS_PRICING = {
       { value: '3.5', label: '3.5 mm', modifier: 0 }
     ],
     option3: [
+      { value: 'all', label: 'All Hole Configurations', modifier: 0 },
       { value: '4', label: '4 Holes', modifier: 0 },
       { value: '6', label: '6 Holes', modifier: 8 },
       { value: '8', label: '8 Holes', modifier: 16 },
@@ -543,8 +554,8 @@ const PRODUCTS_PRICING = {
       { value: '12', label: '12 Holes', modifier: 32 }
     ],
     option4: [
-      { value: 'bulk', label: 'Bulk Non-Sterile', modifier: 0 },
-      { value: 'sterile', label: 'Individually Sterile-Packed', modifier: 1 }
+      { value: 'bulk', label: 'Standard Packing (Non-Sterile, Bulk Box)', modifier: 0 },
+      { value: 'sterile', label: 'Sterile Packing (Individually Wrapped, Ready for OR)', modifier: 1 }
     ]
   },
   'distal-femoral-locking-plate': {
@@ -555,10 +566,12 @@ const PRODUCTS_PRICING = {
       { value: 'titanium', label: 'Titanium (Ti-6Al-4V)', modifier: 8 }
     ],
     diameter: [
+      { value: 'all', label: 'All Diameters', modifier: 0 },
       { value: '4.5', label: '4.5 mm', modifier: 0 },
       { value: '5.0', label: '5.0 mm', modifier: 0 }
     ],
     option3: [
+      { value: 'all', label: 'All Hole Configurations', modifier: 0 },
       { value: '4', label: '4 Holes', modifier: 0 },
       { value: '6', label: '6 Holes', modifier: 8 },
       { value: '8', label: '8 Holes', modifier: 16 },
@@ -566,6 +579,7 @@ const PRODUCTS_PRICING = {
       { value: '12', label: '12 Holes', modifier: 32 }
     ],
     option4: [
+      { value: 'all', label: 'All Sides (Left + Right)', modifier: 0 },
       { value: 'left', label: 'Left', modifier: 0 },
       { value: 'right', label: 'Right', modifier: 0 }
     ]
@@ -581,6 +595,7 @@ const PRODUCTS_PRICING = {
       { value: '5.0', label: '5.0 mm', modifier: 0 }
     ],
     option3: [
+      { value: 'all', label: 'All Hole Configurations', modifier: 0 },
       { value: '4', label: '4 Holes', modifier: 0 },
       { value: '6', label: '6 Holes', modifier: 8 },
       { value: '8', label: '8 Holes', modifier: 16 },
@@ -588,44 +603,49 @@ const PRODUCTS_PRICING = {
       { value: '12', label: '12 Holes', modifier: 32 }
     ],
     option4: [
+      { value: 'all', label: 'All Sides (Left + Right)', modifier: 0 },
       { value: 'left', label: 'Left', modifier: 0 },
       { value: 'right', label: 'Right', modifier: 0 }
     ]
   },
   't-type-locking-plate-titanium': {
     basePrice: 12,
-    optionLabels: { material: 'Material', diameter: 'Diameter', option3: 'Holes', option4: 'Packaging' },
+    optionLabels: { material: 'Material', diameter: 'Diameter', option3: 'Holes', option4: 'Packaging & Sterility' },
     material: [
       { value: 'titanium', label: 'Titanium (Ti-6Al-4V)', modifier: 0 }
     ],
     diameter: [
+      { value: 'all', label: 'All Diameters', modifier: 0 },
       { value: '2.0', label: '2.0 mm', modifier: 0 },
       { value: '2.7', label: '2.7 mm', modifier: 2 },
       { value: '3.5', label: '3.5 mm', modifier: 5 }
     ],
     option3: [
+      { value: 'all', label: 'All Hole Configurations', modifier: 0 },
       { value: '3', label: '3+3 Holes', modifier: 0 },
       { value: '4', label: '3+4 Holes', modifier: 3 },
       { value: '5', label: '3+5 Holes', modifier: 6 },
       { value: '6', label: '3+6 Holes', modifier: 9 }
     ],
     option4: [
-      { value: 'bulk', label: 'Bulk Non-Sterile', modifier: 0 },
-      { value: 'sterile', label: 'Individually Sterile-Packed', modifier: 1 }
+      { value: 'bulk', label: 'Standard Packing (Non-Sterile, Bulk Box)', modifier: 0 },
+      { value: 'sterile', label: 'Sterile Packing (Individually Wrapped, Ready for OR)', modifier: 1 }
     ]
   },
   'straight-reconstruction-locking-plate': {
     basePrice: 17,
-    optionLabels: { material: 'Material', diameter: 'Diameter', option3: 'Holes', option4: 'Packaging' },
+    optionLabels: { material: 'Material', diameter: 'Diameter', option3: 'Holes', option4: 'Packaging & Sterility' },
     material: [
       { value: 'stainless-steel', label: 'Stainless Steel 316L', modifier: 0 },
       { value: 'titanium', label: 'Titanium (Ti-6Al-4V)', modifier: 6 }
     ],
     diameter: [
+      { value: 'all', label: 'All Diameters', modifier: 0 },
       { value: '3.5', label: '3.5 mm', modifier: 0 },
       { value: '4.5', label: '4.5 mm', modifier: 4 }
     ],
     option3: [
+      { value: 'all', label: 'All Hole Configurations', modifier: 0 },
       { value: '5', label: '5 Holes', modifier: 0 },
       { value: '6', label: '6 Holes', modifier: 8 },
       { value: '8', label: '8 Holes', modifier: 16 },
@@ -633,8 +653,8 @@ const PRODUCTS_PRICING = {
       { value: '12', label: '12 Holes', modifier: 32 }
     ],
     option4: [
-      { value: 'bulk', label: 'Bulk Non-Sterile', modifier: 0 },
-      { value: 'sterile', label: 'Individually Sterile-Packed', modifier: 1 }
+      { value: 'bulk', label: 'Standard Packing (Non-Sterile, Bulk Box)', modifier: 0 },
+      { value: 'sterile', label: 'Sterile Packing (Individually Wrapped, Ready for OR)', modifier: 1 }
     ]
   },
   'lcp-distal-radius-volar-plate-2-7mm': {
@@ -648,19 +668,21 @@ const PRODUCTS_PRICING = {
       { value: '2.7', label: '2.7 mm', modifier: 0 }
     ],
     option3: [
+      { value: 'all', label: 'All Hole Configurations', modifier: 0 },
       { value: '2', label: '2 Holes', modifier: 0 },
       { value: '3', label: '3 Holes', modifier: 8 },
       { value: '4', label: '4 Holes', modifier: 16 },
       { value: '5', label: '5 Holes', modifier: 24 }
     ],
     option4: [
+      { value: 'all', label: 'All Sides (Left + Right)', modifier: 0 },
       { value: 'left', label: 'Left', modifier: 0 },
       { value: 'right', label: 'Right', modifier: 0 }
     ]
   },
   'one-third-tubular-trauma-locking-plate': {
     basePrice: 9,
-    optionLabels: { material: 'Material', diameter: 'Diameter', option3: 'Holes', option4: 'Packaging' },
+    optionLabels: { material: 'Material', diameter: 'Diameter', option3: 'Holes', option4: 'Packaging & Sterility' },
     material: [
       { value: 'stainless-steel', label: 'Stainless Steel 316L', modifier: 0 },
       { value: 'titanium', label: 'Titanium (Ti-6Al-4V)', modifier: 5 }
@@ -669,6 +691,7 @@ const PRODUCTS_PRICING = {
       { value: '3.5', label: '3.5 mm', modifier: 0 }
     ],
     option3: [
+      { value: 'all', label: 'All Hole Configurations', modifier: 0 },
       { value: '4', label: '4 Holes', modifier: 0 },
       { value: '6', label: '6 Holes', modifier: 8 },
       { value: '8', label: '8 Holes', modifier: 16 },
@@ -676,21 +699,23 @@ const PRODUCTS_PRICING = {
       { value: '12', label: '12 Holes', modifier: 32 }
     ],
     option4: [
-      { value: 'bulk', label: 'Bulk Non-Sterile', modifier: 0 },
-      { value: 'sterile', label: 'Individually Sterile-Packed', modifier: 1 }
+      { value: 'bulk', label: 'Standard Packing (Non-Sterile, Bulk Box)', modifier: 0 },
+      { value: 'sterile', label: 'Sterile Packing (Individually Wrapped, Ready for OR)', modifier: 1 }
     ]
   },
   'mini-fragment-straight-bridge-plate': {
     basePrice: 8,
-    optionLabels: { material: 'Material', diameter: 'Diameter', option3: 'Holes', option4: 'Packaging' },
+    optionLabels: { material: 'Material', diameter: 'Diameter', option3: 'Holes', option4: 'Packaging & Sterility' },
     material: [
       { value: 'titanium', label: 'Titanium (Ti-6Al-4V)', modifier: 0 }
     ],
     diameter: [
+      { value: 'all', label: 'All Diameters', modifier: 0 },
       { value: '2.0', label: '2.0 mm', modifier: 0 },
       { value: '2.7', label: '2.7 mm', modifier: 3 }
     ],
     option3: [
+      { value: 'all', label: 'All Hole Configurations', modifier: 0 },
       { value: '5', label: '5 Holes', modifier: 0 },
       { value: '6', label: '6 Holes', modifier: 8 },
       { value: '7', label: '7 Holes', modifier: 16 },
@@ -699,13 +724,13 @@ const PRODUCTS_PRICING = {
       { value: '10', label: '10 Holes', modifier: 40 }
     ],
     option4: [
-      { value: 'bulk', label: 'Bulk Non-Sterile', modifier: 0 },
-      { value: 'sterile', label: 'Individually Sterile-Packed', modifier: 1 }
+      { value: 'bulk', label: 'Standard Packing (Non-Sterile, Bulk Box)', modifier: 0 },
+      { value: 'sterile', label: 'Sterile Packing (Individually Wrapped, Ready for OR)', modifier: 1 }
     ]
   },
   'tplo-arc-plate-veterinary': {
     basePrice: 22,
-    optionLabels: { material: 'Material', diameter: 'Diameter', option3: 'Side', option4: 'Packaging' },
+    optionLabels: { material: 'Material', diameter: 'Diameter', option3: 'Side', option4: 'Packaging & Sterility' },
     material: [
       { value: 'stainless-steel', label: 'Stainless Steel 316L', modifier: 0 },
       { value: 'titanium', label: 'Titanium (Ti-6Al-4V)', modifier: 8 }
@@ -718,39 +743,42 @@ const PRODUCTS_PRICING = {
       { value: 'right', label: 'Right', modifier: 0 }
     ],
     option4: [
-      { value: 'bulk', label: 'Bulk Non-Sterile', modifier: 0 },
-      { value: 'sterile', label: 'Individually Sterile-Packed', modifier: 2 }
+      { value: 'bulk', label: 'Standard Packing (Non-Sterile, Bulk Box)', modifier: 0 },
+      { value: 'sterile', label: 'Sterile Packing (Individually Wrapped, Ready for OR)', modifier: 2 }
     ]
   },
   'acl-peek-interference-screw-9mm': {
     basePrice: 24.99,
-    optionLabels: { material: 'Material', diameter: 'Diameter', option3: 'Length', option4: 'Packaging' },
+    optionLabels: { material: 'Material', diameter: 'Diameter', option3: 'Length', option4: 'Packaging & Sterility' },
     material: [
       { value: 'peek', label: 'PEEK Polymer', modifier: 0 }
     ],
     diameter: [
+      { value: 'all', label: 'All Diameters', modifier: 0 },
       { value: '7', label: '7 mm', modifier: 0 },
       { value: '8', label: '8 mm', modifier: 0 },
       { value: '9', label: '9 mm', modifier: 0 }
     ],
     option3: [
+      { value: 'all', label: 'All Available Lengths', modifier: 0 },
       { value: '20', label: '20 mm', modifier: 0 },
       { value: '25', label: '25 mm', modifier: 0 },
       { value: '30', label: '30 mm', modifier: 0 },
       { value: '35', label: '35 mm', modifier: 0 }
     ],
     option4: [
-      { value: 'bulk', label: 'Bulk Non-Sterile', modifier: 0 },
-      { value: 'sterile', label: 'Individually Sterile-Packed', modifier: 1 }
+      { value: 'bulk', label: 'Standard Packing (Non-Sterile, Bulk Box)', modifier: 0 },
+      { value: 'sterile', label: 'Sterile Packing (Individually Wrapped, Ready for OR)', modifier: 1 }
     ]
   },
   'acl-titanium-interference-screw': {
     basePrice: 3.49,
-    optionLabels: { material: 'Material', diameter: 'Diameter', option3: 'Length', option4: 'Packaging' },
+    optionLabels: { material: 'Material', diameter: 'Diameter', option3: 'Length', option4: 'Packaging & Sterility' },
     material: [
       { value: 'titanium', label: 'Titanium (Ti-6Al-4V Grade V)', modifier: 0 }
     ],
     diameter: [
+      { value: 'all', label: 'All Diameters', modifier: 0 },
       { value: '7', label: '7 mm', modifier: 0 },
       { value: '8', label: '8 mm', modifier: 0 },
       { value: '9', label: '9 mm', modifier: 0 },
@@ -758,30 +786,33 @@ const PRODUCTS_PRICING = {
       { value: '11', label: '11 mm', modifier: 0 }
     ],
     option3: [
+      { value: 'all', label: 'All Available Lengths', modifier: 0 },
       { value: '20', label: '20 mm', modifier: 0 },
       { value: '25', label: '25 mm', modifier: 0 },
       { value: '30', label: '30 mm', modifier: 0 },
       { value: '35', label: '35 mm', modifier: 0 }
     ],
     option4: [
-      { value: 'bulk', label: 'Bulk Non-Sterile', modifier: 0 },
-      { value: 'sterile', label: 'Individually Sterile-Packed', modifier: 1 }
+      { value: 'bulk', label: 'Standard Packing (Non-Sterile, Bulk Box)', modifier: 0 },
+      { value: 'sterile', label: 'Sterile Packing (Individually Wrapped, Ready for OR)', modifier: 1 }
     ]
   },
   'alps-mini-t-type-locking-plate': {
     basePrice: 10,
-    optionLabels: { material: 'Material', diameter: 'Diameter', option3: 'Holes', option4: 'Packaging' },
+    optionLabels: { material: 'Material', diameter: 'Diameter', option3: 'Holes', option4: 'Packaging & Sterility' },
     material: [
       { value: 'titanium', label: 'Titanium', modifier: 0 },
       { value: 'stainless-steel', label: 'Stainless Steel', modifier: 2 }
     ],
     diameter: [
+      { value: 'all', label: 'All Diameters', modifier: 0 },
       { value: '1.5', label: '1.5 mm', modifier: 0 },
       { value: '2.0', label: '2.0 mm', modifier: 2 },
       { value: '2.4', label: '2.4 mm', modifier: 4 },
       { value: '2.7', label: '2.7 mm', modifier: 6 }
     ],
     option3: [
+      { value: 'all', label: 'All Hole Configurations', modifier: 0 },
       { value: '4', label: '4 Holes', modifier: 0 },
       { value: '5', label: '5 Holes', modifier: 8 },
       { value: '6', label: '6 Holes', modifier: 16 },
@@ -789,13 +820,13 @@ const PRODUCTS_PRICING = {
       { value: '8', label: '8 Holes', modifier: 32 }
     ],
     option4: [
-      { value: 'bulk', label: 'Bulk Non-Sterile', modifier: 0 },
-      { value: 'sterile', label: 'Individually Sterile-Packed', modifier: 1 }
+      { value: 'bulk', label: 'Standard Packing (Non-Sterile, Bulk Box)', modifier: 0 },
+      { value: 'sterile', label: 'Sterile Packing (Individually Wrapped, Ready for OR)', modifier: 1 }
     ]
   },
   'dhs-dynamic-hip-lag-screw': {
     basePrice: 3.99,
-    optionLabels: { material: 'Material', diameter: 'Diameter', option3: 'Length', option4: 'Packaging' },
+    optionLabels: { material: 'Material', diameter: 'Diameter', option3: 'Length', option4: 'Packaging & Sterility' },
     material: [
       { value: 'stainless-steel', label: 'Stainless Steel 316L', modifier: 0 },
       { value: 'titanium', label: 'Titanium (Ti-6Al-4V)', modifier: 6 }
@@ -804,6 +835,7 @@ const PRODUCTS_PRICING = {
       { value: '12.5', label: '12.5 mm (standard DHS thread OD)', modifier: 0 }
     ],
     option3: [
+      { value: 'all', label: 'All Available Lengths', modifier: 0 },
       { value: '60', label: '60 mm', modifier: 0 },
       { value: '65', label: '65 mm', modifier: 0 },
       { value: '70', label: '70 mm', modifier: 0 },
@@ -815,8 +847,8 @@ const PRODUCTS_PRICING = {
       { value: '100', label: '100 mm', modifier: 0 }
     ],
     option4: [
-      { value: 'bulk', label: 'Bulk Non-Sterile', modifier: 0 },
-      { value: 'sterile', label: 'Individually Sterile-Packed', modifier: 1 }
+      { value: 'bulk', label: 'Standard Packing (Non-Sterile, Bulk Box)', modifier: 0 },
+      { value: 'sterile', label: 'Sterile Packing (Individually Wrapped, Ready for OR)', modifier: 1 }
     ]
   },
   'cancellous-cannulated-screw-half-thread': {
@@ -827,6 +859,7 @@ const PRODUCTS_PRICING = {
       { value: 'titanium', label: 'Titanium (Ti-6Al-4V)', modifier: 2.5 }
     ],
     diameter: [
+      { value: 'all', label: 'All Diameters', modifier: 0 },
       { value: '4.0', label: '4.0 mm', modifier: 0, lengths: [
         { value: '10', label: '10 mm', modifier: 0 },
         { value: '12', label: '12 mm', modifier: 0 },
@@ -941,11 +974,13 @@ const PRODUCTS_PRICING = {
       { value: 'titanium', label: 'Titanium (Ti-6Al-4V)', modifier: 0.4 }
     ],
     diameter: [
+      { value: 'all', label: 'All Diameters', modifier: 0 },
       { value: '1.5', label: '1.5 mm', modifier: 0 },
       { value: '2.0', label: '2.0 mm', modifier: 0 },
       { value: '2.5', label: '2.5 mm', modifier: 0 }
     ],
     option3: [
+      { value: 'all', label: 'All Available Lengths', modifier: 0 },
       { value: '4', label: '4 mm', modifier: 0 },
       { value: '5', label: '5 mm', modifier: 0 },
       { value: '6', label: '6 mm', modifier: 0 },
@@ -969,10 +1004,12 @@ const PRODUCTS_PRICING = {
       { value: 'titanium', label: 'Titanium (Ti-6Al-4V)', modifier: 6 }
     ],
     diameter: [
+      { value: 'all', label: 'All Diameters', modifier: 0 },
       { value: '2.7', label: '2.7 mm', modifier: 0 },
       { value: '3.5', label: '3.5 mm', modifier: 3 }
     ],
     option3: [
+      { value: 'all', label: 'All Hole Configurations', modifier: 0 },
       { value: '3', label: '3 Holes', modifier: 0 },
       { value: '4', label: '4 Holes', modifier: 8 },
       { value: '5', label: '5 Holes', modifier: 16 },
@@ -983,13 +1020,14 @@ const PRODUCTS_PRICING = {
       { value: '10', label: '10 Holes', modifier: 56 }
     ],
     option4: [
+      { value: 'all', label: 'All Sides (Left + Right)', modifier: 0 },
       { value: 'left', label: 'Left', modifier: 0 },
       { value: 'right', label: 'Right', modifier: 0 }
     ]
   },
   'veterinary-lc-dcp-t-plate': {
     basePrice: 14,
-    optionLabels: { material: 'Material', diameter: 'Diameter', option3: 'Holes', option4: 'Packaging' },
+    optionLabels: { material: 'Material', diameter: 'Diameter', option3: 'Holes', option4: 'Packaging & Sterility' },
     material: [
       { value: 'stainless-steel', label: 'Stainless Steel 316L', modifier: 0 },
       { value: 'titanium', label: 'Titanium (Ti-6Al-4V)', modifier: 5 }
@@ -998,6 +1036,7 @@ const PRODUCTS_PRICING = {
       { value: '2.4', label: '2.4 mm', modifier: 0 }
     ],
     option3: [
+      { value: 'all', label: 'All Hole Configurations', modifier: 0 },
       { value: '5', label: '5 Holes', modifier: 0 },
       { value: '6', label: '6 Holes', modifier: 6 },
       { value: '7', label: '7 Holes', modifier: 12 },
@@ -1006,8 +1045,8 @@ const PRODUCTS_PRICING = {
       { value: '10', label: '10 Holes', modifier: 30 }
     ],
     option4: [
-      { value: 'bulk', label: 'Bulk Non-Sterile', modifier: 0 },
-      { value: 'sterile', label: 'Individually Sterile-Packed', modifier: 1 }
+      { value: 'bulk', label: 'Standard Packing (Non-Sterile, Bulk Box)', modifier: 0 },
+      { value: 'sterile', label: 'Sterile Packing (Individually Wrapped, Ready for OR)', modifier: 1 }
     ]
   },
   'radius-t-titanium-locking-plate-3-5mm': {
@@ -1019,6 +1058,7 @@ const PRODUCTS_PRICING = {
     ],
     diameter: [{ value: '3.5', label: '3.5 mm', modifier: 0 }],
     option3: [
+      { value: 'all', label: 'All Hole Configurations', modifier: 0 },
       { value: '3', label: '3 Holes', modifier: 0 },
       { value: '4', label: '4 Holes', modifier: 8 },
       { value: '5', label: '5 Holes', modifier: 16 },
@@ -1026,27 +1066,30 @@ const PRODUCTS_PRICING = {
       { value: '7', label: '7 Holes', modifier: 32 }
     ],
     option4: [
+      { value: 'all', label: 'All Sides (Left + Right)', modifier: 0 },
       { value: 'left', label: 'Left', modifier: 0 },
       { value: 'right', label: 'Right', modifier: 0 }
     ]
   },
   'bipolar-hip-prosthesis-37-39mm': {
     basePrice: 65,
-    optionLabels: { material: 'Material', diameter: 'Head Size', option3: 'Stem Length', option4: 'Packaging' },
+    optionLabels: { material: 'Material', diameter: 'Head Size', option3: 'Stem Length', option4: 'Packaging & Sterility' },
     material: [{ value: 'stainless-steel', label: 'Stainless Steel 316L', modifier: 0 }],
     diameter: [
+      { value: 'all', label: 'All Diameters', modifier: 0 },
       { value: '37', label: '37 mm', modifier: 0 },
       { value: '39', label: '39 mm', modifier: 2 }
     ],
     option3: [
+      { value: 'all', label: 'All Available Lengths', modifier: 0 },
       { value: '110', label: '110 mm', modifier: 0 },
       { value: '120', label: '120 mm', modifier: 3 },
       { value: '130', label: '130 mm', modifier: 6 },
       { value: '140', label: '140 mm', modifier: 9 }
     ],
     option4: [
-      { value: 'bulk', label: 'Bulk Non-Sterile', modifier: 0 },
-      { value: 'sterile', label: 'Individually Sterile-Packed', modifier: 4 }
+      { value: 'bulk', label: 'Standard Packing (Non-Sterile, Bulk Box)', modifier: 0 },
+      { value: 'sterile', label: 'Sterile Packing (Individually Wrapped, Ready for OR)', modifier: 4 }
     ]
   },
   'distal-ulna-hook-locking-plate': {
@@ -1058,11 +1101,13 @@ const PRODUCTS_PRICING = {
     ],
     diameter: [{ value: '2.7', label: '2.7 mm', modifier: 0 }],
     option3: [
+      { value: 'all', label: 'All Hole Configurations', modifier: 0 },
       { value: '3', label: '3 Holes', modifier: 0 },
       { value: '4', label: '4 Holes', modifier: 8 },
       { value: '5', label: '5 Holes', modifier: 16 }
     ],
     option4: [
+      { value: 'all', label: 'All Sides (Left + Right)', modifier: 0 },
       { value: 'left', label: 'Left', modifier: 0 },
       { value: 'right', label: 'Right', modifier: 0 }
     ]
@@ -1072,6 +1117,7 @@ const PRODUCTS_PRICING = {
     optionLabels: { material: 'Material', diameter: 'Diameter', option3: 'Length', option4: 'Tip Type' },
     material: [{ value: 'stainless-steel', label: 'Stainless Steel 316L', modifier: 0 }],
     diameter: [
+      { value: 'all', label: 'All Diameters', modifier: 0 },
       { value: '1.0', label: '1.0 mm', modifier: 0 },
       { value: '1.2', label: '1.2 mm', modifier: 0 },
       { value: '1.5', label: '1.5 mm', modifier: 0.05 },
@@ -1081,6 +1127,7 @@ const PRODUCTS_PRICING = {
       { value: '3.0', label: '3.0 mm', modifier: 0.15 }
     ],
     option3: [
+      { value: 'all', label: 'All Available Lengths', modifier: 0 },
       { value: '150', label: '150 mm', modifier: 0 },
       { value: '200', label: '200 mm', modifier: 0.05 },
       { value: '250', label: '250 mm', modifier: 0.1 },
@@ -1093,9 +1140,10 @@ const PRODUCTS_PRICING = {
   },
   'austin-moore-hip-prosthesis': {
     basePrice: 48,
-    optionLabels: { material: 'Material', diameter: 'Head Size', option3: 'Stem Length', option4: 'Packaging' },
+    optionLabels: { material: 'Material', diameter: 'Head Size', option3: 'Stem Length', option4: 'Packaging & Sterility' },
     material: [{ value: 'stainless-steel', label: 'Stainless Steel 316L', modifier: 0 }],
     diameter: [
+      { value: 'all', label: 'All Diameters', modifier: 0 },
       { value: '37', label: '37 mm', modifier: 0 },
       { value: '41', label: '41 mm', modifier: 1.5 },
       { value: '45', label: '45 mm', modifier: 3 },
@@ -1108,8 +1156,8 @@ const PRODUCTS_PRICING = {
       { value: 'long', label: 'Long Stem', modifier: 5 }
     ],
     option4: [
-      { value: 'bulk', label: 'Bulk Non-Sterile', modifier: 0 },
-      { value: 'sterile', label: 'Individually Sterile-Packed', modifier: 4 }
+      { value: 'bulk', label: 'Standard Packing (Non-Sterile, Bulk Box)', modifier: 0 },
+      { value: 'sterile', label: 'Sterile Packing (Individually Wrapped, Ready for OR)', modifier: 4 }
     ]
   },
   'plate-bending-plier': {
@@ -1121,6 +1169,7 @@ const PRODUCTS_PRICING = {
       { value: 'large', label: 'Large Fragment', modifier: 6 }
     ],
     option3: [
+      { value: 'all', label: 'All Available Lengths', modifier: 0 },
       { value: '180', label: '180 mm', modifier: 0 },
       { value: '220', label: '220 mm', modifier: 2 },
       { value: '260', label: '260 mm', modifier: 4 }
@@ -1135,12 +1184,14 @@ const PRODUCTS_PRICING = {
     optionLabels: { material: 'Material', diameter: 'Diameter', option3: 'Length', option4: 'Pack Size' },
     material: [{ value: 'titanium', label: 'Titanium (Ti-6Al-4V)', modifier: 0 }],
     diameter: [
+      { value: 'all', label: 'All Diameters', modifier: 0 },
       { value: '2.0', label: '2.0 mm', modifier: 0 },
       { value: '2.5', label: '2.5 mm', modifier: 0.5 },
       { value: '3.0', label: '3.0 mm', modifier: 1 },
       { value: '3.5', label: '3.5 mm', modifier: 1.5 }
     ],
-    option3: [{ value: '420', label: '420 mm', modifier: 0 }],
+    option3: [
+      { value: 'all', label: 'All Available Lengths', modifier: 0 },{ value: '420', label: '420 mm', modifier: 0 }],
     option4: [
       { value: 'single', label: 'Single Nail', modifier: 0 },
       { value: 'set20', label: 'Set of 20 Pcs', modifier: 110 }
@@ -1148,9 +1199,10 @@ const PRODUCTS_PRICING = {
   },
   'thompson-hip-prosthesis': {
     basePrice: 46,
-    optionLabels: { material: 'Material', diameter: 'Head Size', option3: 'Stem Type', option4: 'Packaging' },
+    optionLabels: { material: 'Material', diameter: 'Head Size', option3: 'Stem Type', option4: 'Packaging & Sterility' },
     material: [{ value: 'stainless-steel', label: 'Stainless Steel 316L', modifier: 0 }],
     diameter: [
+      { value: 'all', label: 'All Diameters', modifier: 0 },
       { value: '37', label: '37 mm', modifier: 0 },
       { value: '41', label: '41 mm', modifier: 1.5 },
       { value: '45', label: '45 mm', modifier: 3 },
@@ -1163,8 +1215,8 @@ const PRODUCTS_PRICING = {
       { value: 'extra-long', label: 'Extra Long Stem', modifier: 5 }
     ],
     option4: [
-      { value: 'bulk', label: 'Bulk Non-Sterile', modifier: 0 },
-      { value: 'sterile', label: 'Individually Sterile-Packed', modifier: 4 }
+      { value: 'bulk', label: 'Standard Packing (Non-Sterile, Bulk Box)', modifier: 0 },
+      { value: 'sterile', label: 'Sterile Packing (Individually Wrapped, Ready for OR)', modifier: 4 }
     ]
   },
   'alps-locking-plate-system': {
@@ -1175,6 +1227,7 @@ const PRODUCTS_PRICING = {
       { value: 'stainless-steel', label: 'Stainless Steel 316L', modifier: -3 }
     ],
     diameter: [
+      { value: 'all', label: 'All Diameters', modifier: 0 },
       { value: '1.5', label: '1.5 mm', modifier: 0 },
       { value: '2.0', label: '2.0 mm', modifier: 0 },
       { value: '2.4', label: '2.4 mm', modifier: 0 },
@@ -1182,12 +1235,14 @@ const PRODUCTS_PRICING = {
       { value: '3.5', label: '3.5 mm', modifier: 2 }
     ],
     option3: [
+      { value: 'all', label: 'All Hole Configurations', modifier: 0 },
       { value: '4', label: '4 Holes', modifier: 0 },
       { value: '6', label: '6 Holes', modifier: 8 },
       { value: '8', label: '8 Holes', modifier: 16 },
       { value: '10', label: '10 Holes', modifier: 24 }
     ],
     option4: [
+      { value: 'all', label: 'All Sides (Left + Right)', modifier: 0 },
       { value: 'left', label: 'Left', modifier: 0 },
       { value: 'right', label: 'Right', modifier: 0 }
     ]
@@ -1257,6 +1312,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function updatePrice() {
       var currentLengthOptions = getLengthOptionsFor(diameterSelect.value);
+      var hasAllSelection = [materialSelect.value, diameterSelect.value, option3Select.value, option4Select.value].indexOf('all') !== -1;
+
       var unitPrice = data.basePrice
         + findModifier(data.material, materialSelect.value)
         + findModifier(data.diameter, diameterSelect.value)
@@ -1268,12 +1325,20 @@ document.addEventListener('DOMContentLoaded', function () {
       var unitPkr = Math.round(unitPrice * PKR_RATE);
       var totalPkr = Math.round(total * PKR_RATE);
 
-      priceEl.textContent = '$' + unitPrice.toFixed(2);
       var pkrNoteEl = document.getElementById('price-pkr-note-' + productId);
-      if (pkrNoteEl) pkrNoteEl.textContent = '≈ Rs ' + unitPkr.toLocaleString('en-PK') + ' / qty';
-      if (priceTotalEl) priceTotalEl.textContent = '$' + total.toFixed(2);
       var totalPkrNoteEl = document.getElementById('price-total-pkr-note-' + productId);
-      if (totalPkrNoteEl) totalPkrNoteEl.textContent = '≈ Rs ' + totalPkr.toLocaleString('en-PK');
+
+      if (hasAllSelection) {
+        priceEl.textContent = 'Request Quote';
+        if (pkrNoteEl) pkrNoteEl.textContent = 'Multi-variant order — priced on request';
+        if (priceTotalEl) priceTotalEl.textContent = 'Request Quote';
+        if (totalPkrNoteEl) totalPkrNoteEl.textContent = 'We will confirm pricing on WhatsApp';
+      } else {
+        priceEl.textContent = '$' + unitPrice.toFixed(2);
+        if (pkrNoteEl) pkrNoteEl.textContent = '≈ Rs ' + unitPkr.toLocaleString('en-PK') + ' / qty';
+        if (priceTotalEl) priceTotalEl.textContent = '$' + total.toFixed(2);
+        if (totalPkrNoteEl) totalPkrNoteEl.textContent = '≈ Rs ' + totalPkr.toLocaleString('en-PK');
+      }
 
       var selectedMaterial = (data.material || []).filter(function (o) { return o.value === materialSelect.value; })[0];
       var selectedDiameter = (data.diameter || []).filter(function (o) { return o.value === diameterSelect.value; })[0];
@@ -1288,11 +1353,13 @@ document.addEventListener('DOMContentLoaded', function () {
       var quoteLink = document.querySelector('.quote-link[data-product-id="' + productId + '"]');
       if (quoteLink && window.ImplanciaCart) {
         var productName = quoteLink.getAttribute('data-product-name') || productId;
+        var priceLine = hasAllSelection
+          ? 'This is a multi-variant request — please send me a bulk quote.'
+          : 'Estimated Unit Price: $' + unitPrice.toFixed(2) + '\nEstimated Order Total: $' + total.toFixed(2);
         var message = 'Hello Implancia, I am interested in the ' + productName + '.\n' +
           'Configuration: ' + materialLabel + ', ' + diameterLabel + ', ' + option3Label + ', ' + option4Label + '\n' +
           'Quantity: ' + qty + ' units\n' +
-          'Estimated Unit Price: $' + unitPrice.toFixed(2) + '\n' +
-          'Estimated Order Total: $' + total.toFixed(2) + '\n' +
+          priceLine + '\n' +
           'Please confirm availability, exact pricing, and delivery to the USA.';
         quoteLink.setAttribute('href', 'https://wa.me/' + window.ImplanciaCart.WHATSAPP_NUMBER + '?text=' + encodeURIComponent(message));
       }
@@ -1304,8 +1371,10 @@ document.addEventListener('DOMContentLoaded', function () {
         addToCartBtn.setAttribute('data-diameter', diameterLabel);
         addToCartBtn.setAttribute('data-length', option3Label);
         addToCartBtn.setAttribute('data-option4', option4Label);
-        addToCartBtn.setAttribute('data-price', '$' + unitPrice.toFixed(2));
+        addToCartBtn.setAttribute('data-price', hasAllSelection ? 'Request Quote' : '$' + unitPrice.toFixed(2));
         addToCartBtn.setAttribute('data-qty', qty);
+        addToCartBtn.disabled = hasAllSelection;
+        addToCartBtn.textContent = hasAllSelection ? 'Ask on WhatsApp for Quote' : '+ Add to Cart';
       }
     }
 

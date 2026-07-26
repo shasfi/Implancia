@@ -371,17 +371,17 @@ const PRODUCT_DETAIL_CONTENT = {
       'products/3_Cannulated Herbert Screws titanium Quality/Cannulated Herbert Screws 2.webp',
       'products/3_Cannulated Herbert Screws titanium Quality/Cannulated Herbert Screws 1.webp'
     ],
-    description: 'Precision-engineered cannulated Herbert screws for scaphoid fracture fixation and small joint arthrodesis. Made from medical-grade titanium (Ti-6Al-4V) with a cannulated design for precise guidewire placement. The unique headless compression design provides excellent interfragmentary compression. Choose your diameter and length below to see live pricing update instantly.',
+    description: 'Precision-engineered cannulated Herbert screws for scaphoid fracture fixation and small joint arthrodesis, available in 316L stainless steel or titanium (Ti-6Al-4V) with a cannulated design for precise guidewire placement. The unique headless compression design provides excellent interfragmentary compression. Choose your diameter and length below to see live pricing update instantly.',
     specs: [
-      { label: 'Material', value: 'Titanium Grade (Ti-6Al-4V)' },
+      { label: 'Material', value: 'Stainless Steel 316L / Titanium (Ti-6Al-4V)' },
       { label: 'Implant Type', value: 'Cannulated Headless Compression Screw' },
       { label: 'Hole Structure', value: 'Cannulated (guidewire) design' },
       { label: 'Diameter Range', value: '2.0mm - 6.5mm' },
-      { label: 'Length Range', value: '14mm - 75mm' },
+      { label: 'Length Range', value: '10mm - 80mm (diameter-dependent)' },
       { label: 'Compatibility', value: 'Standalone headless compression (no plate required)' },
       { label: 'Locking Technology', value: 'N/A — headless variable-pitch compression' },
       { label: 'Sterility Status', value: 'Non-sterile as supplied; sterile packaging available on request' },
-      { label: 'Surface Treatment', value: 'Anodized' },
+      { label: 'Surface Treatment', value: 'Anodized (Ti) / Passivated (SS)' },
       { label: 'Anatomical Location', value: 'Scaphoid, small bones/joints of hand and foot' },
       { label: 'Surgical Technique', value: 'Guidewire-assisted percutaneous or open technique' },
       { label: 'Standard', value: 'ISO 13485' }
@@ -1258,8 +1258,8 @@ const PRODUCT_DETAIL_CONTENT = {
     ],
     indications: 'Used intraoperatively by orthopedic surgeons to bend and contour locking compression plates, reconstruction plates, and non-locking plates to match the patient\'s bone anatomy before fixation.',
     compatibleInstruments: ['Plate holding forceps', 'Reconstruction plate bending press', 'Autoclave sterilization tray'],
-    tags: ['ISO 13485', 'Reusable Instrument', 'Surgical Stainless Steel', 'Plate Contouring'],
-    moq: 5,
+    tags: ['ISO 13485', 'Reusable Instrument', 'Surgical Stainless Steel', 'Plate Contouring', '1 Piece Minimum'],
+    moq: 1,
     shippingWeightKg: 0.25
   },
 
@@ -1513,7 +1513,7 @@ const MANUFACTURING_VIDEO = 'video/implancia manufacturing view.mp4';
           '<p class="price-live">Price / Quantity: <span id="price-' + productId + '">$0.00</span> <span class="price-per-unit-note" id="price-pkr-note-' + productId + '">≈ Rs 0 / qty</span></p>' +
           '<p class="price-total-live">Order Total (' + (product.moq || 200) + ' minimum): <span id="price-total-' + productId + '">$0.00</span> <span class="price-per-unit-note" id="price-total-pkr-note-' + productId + '">≈ Rs 0</span></p>' +
           (optLabels.option3 === 'Holes'
-            ? '<p class="price-note-holes">Note: The price shown above reflects the default (lowest) hole count for this plate. Selecting a plate with a higher hole count will increase the price incrementally per additional hole.</p>'
+            ? '<p class="price-note-holes">Note: The price shown above reflects the default (lowest) hole count for this plate. Selecting a plate with a higher hole count will increase the price incrementally per additional hole. The minimum order quantity (MOQ) shown below applies per selected configuration (e.g. per hole count/diameter combination) — not across all variants combined.</p>'
             : '') +
           '<div class="product-tags">' + tagsHtml + '</div>' +
           '<div class="product-actions">' +

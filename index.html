@@ -369,13 +369,31 @@
   <div class="container">
     <div class="catalog-download-box">
       <div class="catalog-download-text">
-        <h2 class="section-title">Download Our Product Catalog</h2>
-        <p>Get the complete Implancia product catalog with full technical specifications, available sizes, and materials &mdash; ideal for distributors, procurement teams, and surgeons who prefer an offline reference.</p>
+        <h2 class="section-title">Our Product Catalog</h2>
+        <p>Browse the complete Implancia product catalog with full technical specifications, available sizes, and materials &mdash; view it right here on the site, or download a copy for offline reference.</p>
       </div>
-      <a href="catalog/implancia-product-catalog.pdf" class="btn btn-primary" download>&#128196; Download Catalog (PDF)</a>
+      <div class="catalog-download-actions">
+        <button type="button" class="btn btn-outline" id="viewCatalogBtn">&#128214; View Catalog Online</button>
+        <a href="catalog/implancia-product-catalog.pdf" class="btn btn-primary" download>&#128196; Download Catalog (PDF)</a>
+      </div>
     </div>
   </div>
 </section>
+
+<div class="catalog-modal-overlay" id="catalogModalOverlay" hidden>
+  <div class="catalog-modal" role="dialog" aria-modal="true" aria-label="Product Catalog Viewer">
+    <div class="catalog-modal-header">
+      <h3>Implancia Product Catalog</h3>
+      <div class="catalog-modal-actions">
+        <a href="catalog/implancia-product-catalog.pdf" class="btn btn-outline btn-sm" download>&#128196; Download</a>
+        <button type="button" class="catalog-modal-close" id="catalogModalClose" aria-label="Close">&times;</button>
+      </div>
+    </div>
+    <div class="catalog-modal-body">
+      <iframe id="catalogModalFrame" src="" title="Implancia Product Catalog PDF" loading="lazy"></iframe>
+    </div>
+  </div>
+</div>
 
 <!-- ===== CERTIFICATIONS AND COMPLIANCE ===== -->
 <section class="section certifications reveal" style="background:var(--color-bg-alt);">
@@ -580,5 +598,32 @@
 <script src="js/theme.js" defer></script>
 <script src="js/script.min.js" defer></script>
 <script src="js/cart.min.js" defer></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var viewBtn = document.getElementById('viewCatalogBtn');
+    var overlay = document.getElementById('catalogModalOverlay');
+    var closeBtn = document.getElementById('catalogModalClose');
+    var frame = document.getElementById('catalogModalFrame');
+    var CATALOG_URL = 'catalog/implancia-product-catalog.pdf';
+
+    function openCatalog() {
+      if (!frame.src) frame.src = CATALOG_URL;
+      overlay.hidden = false;
+      document.body.style.overflow = 'hidden';
+    }
+    function closeCatalog() {
+      overlay.hidden = true;
+      document.body.style.overflow = '';
+    }
+    if (viewBtn) viewBtn.addEventListener('click', openCatalog);
+    if (closeBtn) closeBtn.addEventListener('click', closeCatalog);
+    if (overlay) overlay.addEventListener('click', function (e) {
+      if (e.target === overlay) closeCatalog();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && overlay && !overlay.hidden) closeCatalog();
+    });
+  });
+</script>
 </body>
 </html>
