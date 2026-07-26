@@ -292,6 +292,7 @@ const PRODUCTS_PRICING = {
       { value: 'all', label: 'All Diameters', modifier: 0 },
       { value: '2.5', label: '2.5 mm', modifier: 0, lengths: [
         { value: 'all', label: 'All Lengths', modifier: 0 },
+        { value: '10', label: '10 mm', modifier: 0 },
         { value: '14', label: '14 mm', modifier: 0 },
         { value: '16', label: '16 mm', modifier: 0 },
         { value: '18', label: '18 mm', modifier: 0 },
@@ -1208,9 +1209,23 @@ document.addEventListener('DOMContentLoaded', function () {
     function getLengthOptionsFor(diameterValue) {
       var chosenDiameter = (data.diameter || []).filter(function (o) { return o.value === diameterValue; })[0];
       // If this diameter defines its own length list, use that (diameter-dependent lengths).
-      // Otherwise fall back to the shared flat option3 list (older products, unaffected).
       if (chosenDiameter && chosenDiameter.lengths) return chosenDiameter.lengths;
-      return data.option3 || [];
+      // Otherwise fall back to the shared flat option3 list (older products, unaffected).
+      if (data.option3 && data.option3.length) return data.option3;
+      // "All Diameters" (or any diameter without its own list) on a product whose
+      // lengths are diameter-dependent: show the combined, de-duplicated set of
+      // every length across all diameters instead of leaving the dropdown empty.
+      var seen = {};
+      var combined = [];
+      (data.diameter || []).forEach(function (d) {
+        (d.lengths || []).forEach(function (len) {
+          if (!seen[len.value]) {
+            seen[len.value] = true;
+            combined.push(len);
+          }
+        });
+      });
+      return combined;
     }
 
     populateSelect(materialSelect, data.material);
