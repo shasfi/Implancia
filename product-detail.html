@@ -160,6 +160,7 @@
                 <div class="megamenu-sub-links" id="mm-plates">
                   <a href="products.html?category=plates">All Plates</a>
                   <a href="products.html?category=trauma">Trauma Plates</a>
+                  <a href="product-detail.html?id=alps-locking-plate-system">ALPS Locking Plate System</a>
                   <a href="products.html?category=orthopedics">Orthopedic Locking Plates</a>
                   <a href="products.html?category=veterinary">Veterinary Plates</a>
                 </div>
@@ -169,7 +170,8 @@
                 <div class="megamenu-sub-links" id="mm-hip-joint">
                   <a href="products.html?category=hip-joint">All Hemiarthroplasty</a>
                   <a href="product-detail.html?id=bipolar-hip-prosthesis-37-39mm">Bipolar Hemiarthroplasty</a>
-                  <a href="product-detail.html?id=austin-moore-hip-prosthesis">Unipolar Hemiarthroplasty</a>
+                  <a href="product-detail.html?id=austin-moore-hip-prosthesis">Austin Moore (Unipolar)</a>
+                  <a href="product-detail.html?id=thompson-hip-prosthesis">Thompson (Unipolar)</a>
                 </div>
               </div>
               <div class="megamenu-group">
@@ -1290,6 +1292,69 @@ const PRODUCT_DETAIL_CONTENT = {
     tags: ['ISO 13485', 'Titanium Grade V', 'Pediatric Orthopedics', 'Elastic Nailing (ESIN)'],
     moq: 20,
     shippingWeightKg: 0.015
+  },
+
+  'thompson-hip-prosthesis': {
+    name: 'Thompson Hip Prosthesis - 37mm to 55mm Head, Stainless Steel',
+    categoryLabel: 'Unipolar Hemiarthroplasty',
+    categoryAnchor: 'products.html?category=hip-joint',
+    badge: 'New',
+    optionLabels: { material: 'Material', diameter: 'Head Size', option3: 'Stem Type', option4: 'Packaging' },
+    images: [
+      'products/29_Austin Moore Hip Prosthesis 37-55mm Stem/Austin Moore Hip Prosthesis .webp',
+      'products/29_Austin Moore Hip Prosthesis 37-55mm Stem/Austin Moore Hip Prosthesis  2.webp',
+      'products/29_Austin Moore Hip Prosthesis 37-55mm Stem/Austin Moore Hip Prosthesis  3.webp'
+    ],
+    description: 'Manufacturer-direct Thompson Hip Prosthesis for Unipolar Hemiarthroplasty, a collared, cemented monoblock femoral head implant in 316L stainless steel, available in 37mm to 55mm head sizes with Narrow, Standard, and Extra Long stem options. Manufactured to ISO 13485 for orthopedic hospitals and distributors. Select head size, stem type, and packaging below for instant per-unit pricing in USD and PKR.',
+    specs: [
+      { label: 'Material', value: 'Stainless Steel 316L' },
+      { label: 'Implant Type', value: 'Thompson Unipolar Hip Prosthesis (Monoblock)' },
+      { label: 'Head Size Range', value: '37mm - 55mm' },
+      { label: 'Stem Options', value: 'Narrow, Standard, Extra Long' },
+      { label: 'Design', value: 'Collared, smooth (non-fenestrated) stem, cemented fixation' },
+      { label: 'Sterility Status', value: 'Non-sterile as supplied; sterile packaging available on request' },
+      { label: 'Surface Treatment', value: 'Mirror-polished, passivated' },
+      { label: 'Anatomical Location', value: 'Proximal femur / hip joint' },
+      { label: 'Surgical Technique', value: 'Cemented hip hemiarthroplasty' },
+      { label: 'Standard', value: 'ISO 13485' }
+    ],
+    indications: 'Indicated for hip hemiarthroplasty in displaced femoral neck fractures, particularly in elderly, low-demand patients, and in cases with a shortened femoral neck where the Thompson prosthesis\'s more vertical neck angle provides better seating than other unipolar designs.',
+    compatibleInstruments: ['Thompson rasp/broach', 'Femoral head extractor', 'Femoral head impactor', 'Bone cement'],
+    tags: ['ISO 13485', 'Hip Hemiarthroplasty', 'Cemented', 'Stainless Steel 316L'],
+    moq: 5,
+    shippingWeightKg: 0.3
+  },
+
+  'alps-locking-plate-system': {
+    name: 'ALPS Locking Plate System - 1.5mm to 3.5mm, 4-10 Holes',
+    categoryLabel: 'Trauma Systems',
+    categoryAnchor: 'products.html?category=trauma',
+    badge: 'New',
+    optionLabels: { material: 'Material', diameter: 'Diameter', option3: 'Holes', option4: 'Side' },
+    images: [
+      'products/19_ALPS Mini T Type Locking Plate 1.5, 2.0, ,2.4, 2.7mm 4-8 Holes/ALPS Mini T Type Locking Plate 1.5, 2.0, ,2.4, 2.7mm 4-8 Holes 1.webp',
+      'products/19_ALPS Mini T Type Locking Plate 1.5, 2.0, ,2.4, 2.7mm 4-8 Holes/ALPS Mini T Type Locking Plate 1.5, 2.0, ,2.4, 2.7mm 4-8 Holes 2.webp',
+      'products/19_ALPS Mini T Type Locking Plate 1.5, 2.0, ,2.4, 2.7mm 4-8 Holes/ALPS Mini T Type Locking Plate 1.5, 2.0, ,2.4, 2.7mm 4-8 Holes 3.webp'
+    ],
+    description: 'Manufacturer-direct ALPS (Anatomic Locking Plate System) Locking Plate, a low-profile anatomically contoured locking plate system for trauma fixation, available in 1.5mm to 3.5mm diameters and 4 to 10 hole configurations. Available Left and Right side-specific, in Ti-6Al-4V titanium or 316L stainless steel, manufactured to ISO 13485. Select material, diameter, hole count, and side below for instant per-unit pricing in USD and PKR.',
+    specs: [
+      { label: 'Material', value: 'Titanium (Ti-6Al-4V) / Stainless Steel 316L' },
+      { label: 'Implant Type', value: 'Anatomic Locking Plate System (ALPS)' },
+      { label: 'Hole Range', value: '4 to 10 holes' },
+      { label: 'Plate Diameter', value: '1.5mm - 3.5mm' },
+      { label: 'Locking Technology', value: 'Fixed-angle threaded locking head, low-profile anatomic contour' },
+      { label: 'Sterility Status', value: 'Non-sterile as supplied; sterile packaging available on request' },
+      { label: 'Surface Treatment', value: 'Anodized (Ti) / Passivated (SS)' },
+      { label: 'Anatomical Location', value: 'Extremity trauma sites (hand, foot, distal upper/lower limb)' },
+      { label: 'Surgical Technique', value: 'Locked plating for small-to-mid fragment extremity fractures' },
+      { label: 'Side', value: 'Left and Right specific' },
+      { label: 'Standard', value: 'ISO 13485' }
+    ],
+    indications: 'Indicated for fixation of extremity trauma fractures (hand, foot, wrist, ankle) requiring a low-profile, anatomically contoured locking plate across a range of hole and diameter configurations.',
+    compatibleInstruments: ['Locking drill guide', 'Torque-limiting screwdriver', 'Depth gauge', 'Cannulated drill bit (matching diameter)'],
+    tags: ['ISO 13485', 'Left & Right Available', 'Low-Profile Anatomic Plate', 'ALPS System'],
+    moq: 10,
+    shippingWeightKg: 0.02
   }
 };
 

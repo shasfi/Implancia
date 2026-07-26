@@ -1145,6 +1145,52 @@ const PRODUCTS_PRICING = {
       { value: 'single', label: 'Single Nail', modifier: 0 },
       { value: 'set20', label: 'Set of 20 Pcs', modifier: 110 }
     ]
+  },
+  'thompson-hip-prosthesis': {
+    basePrice: 46,
+    optionLabels: { material: 'Material', diameter: 'Head Size', option3: 'Stem Type', option4: 'Packaging' },
+    material: [{ value: 'stainless-steel', label: 'Stainless Steel 316L', modifier: 0 }],
+    diameter: [
+      { value: '37', label: '37 mm', modifier: 0 },
+      { value: '41', label: '41 mm', modifier: 1.5 },
+      { value: '45', label: '45 mm', modifier: 3 },
+      { value: '49', label: '49 mm', modifier: 4.5 },
+      { value: '55', label: '55 mm', modifier: 6 }
+    ],
+    option3: [
+      { value: 'narrow', label: 'Narrow Stem', modifier: 0 },
+      { value: 'standard', label: 'Standard Stem', modifier: 2 },
+      { value: 'extra-long', label: 'Extra Long Stem', modifier: 5 }
+    ],
+    option4: [
+      { value: 'bulk', label: 'Bulk Non-Sterile', modifier: 0 },
+      { value: 'sterile', label: 'Individually Sterile-Packed', modifier: 4 }
+    ]
+  },
+  'alps-locking-plate-system': {
+    basePrice: 13,
+    optionLabels: { material: 'Material', diameter: 'Diameter', option3: 'Holes', option4: 'Side' },
+    material: [
+      { value: 'titanium', label: 'Titanium (Ti-6Al-4V)', modifier: 0 },
+      { value: 'stainless-steel', label: 'Stainless Steel 316L', modifier: -3 }
+    ],
+    diameter: [
+      { value: '1.5', label: '1.5 mm', modifier: 0 },
+      { value: '2.0', label: '2.0 mm', modifier: 0 },
+      { value: '2.4', label: '2.4 mm', modifier: 0 },
+      { value: '2.7', label: '2.7 mm', modifier: 0 },
+      { value: '3.5', label: '3.5 mm', modifier: 2 }
+    ],
+    option3: [
+      { value: '4', label: '4 Holes', modifier: 0 },
+      { value: '6', label: '6 Holes', modifier: 8 },
+      { value: '8', label: '8 Holes', modifier: 16 },
+      { value: '10', label: '10 Holes', modifier: 24 }
+    ],
+    option4: [
+      { value: 'left', label: 'Left', modifier: 0 },
+      { value: 'right', label: 'Right', modifier: 0 }
+    ]
   }
 };
 
