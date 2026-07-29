@@ -51,7 +51,8 @@
   function updateQty(index, qty) {
     var items = getItems();
     if (!items[index]) return;
-    qty = Math.max(1, parseInt(qty, 10) || 1);
+    var floor = Math.max(1, parseInt(items[index].moq, 10) || 1);
+    qty = Math.max(floor, parseInt(qty, 10) || floor);
     items[index].qty = qty;
     saveItems(items);
   }
@@ -67,7 +68,10 @@
   }
 
   function getCount() {
-    return getItems().reduce(function (sum, i) { return sum + (i.qty || 1); }, 0);
+    // Number of distinct cart lines (products added), not total ordered units —
+    // e.g. adding one plate at its 10-unit MOQ shows "1" in the cart badge,
+    // with the 10 units visible on the line item itself.
+    return getItems().length;
   }
 
   function getSubtotal() {
@@ -249,6 +253,10 @@
         e.preventDefault();
         e.stopPropagation();
         var selectedQty = Math.max(1, parseInt(btn.getAttribute('data-qty'), 10) || 1);
+        // The minimum order quantity for this product (defaults to whatever
+        // quantity was already selected when Add to Cart was pressed, since
+        // the qty stepper is never allowed to go below the product's MOQ).
+        var itemMoq = Math.max(1, parseInt(btn.getAttribute('data-moq'), 10) || selectedQty);
         var item = {
           id: btn.getAttribute('data-product-id') || btn.getAttribute('data-product-name'),
           name: btn.getAttribute('data-product-name') || 'Item',
@@ -259,7 +267,8 @@
           price: btn.getAttribute('data-price') || '',
           image: btn.getAttribute('data-image') || '',
           weight: btn.getAttribute('data-weight') || '0',
-          qty: selectedQty
+          qty: selectedQty,
+          moq: itemMoq
         };
         addItem(item);
         showToast(item.name + ' added to cart');

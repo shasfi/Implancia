@@ -222,7 +222,7 @@
               '<span class="cart-item-meta">' + [item.material, item.diameter, item.length, item.option4].filter(Boolean).map(escapeHtml).join(' &middot; ') + '</span>' +
             '</span>' +
           '</td>' +
-          '<td><input type="number" min="1" class="cart-qty-input" value="' + item.qty + '" data-idx="' + idx + '"></td>' +
+          '<td><div class="cart-qty-controls"><button type="button" class="cart-qty-btn" data-action="decrease" data-idx="' + idx + '" aria-label="Decrease quantity">&minus;</button><input type="number" min="' + (item.moq || 1) + '" step="1" class="cart-qty-input" value="' + item.qty + '" data-idx="' + idx + '"><button type="button" class="cart-qty-btn" data-action="increase" data-idx="' + idx + '" aria-label="Increase quantity">+</button></div></td>' +
           '<td>' + (item.price ? escapeHtml(item.price) : '&mdash;') + '</td>' +
           '<td>' + (price ? '$' + lineTotal.toFixed(2) : '&mdash;') + '</td>' +
           '<td><button type="button" class="cart-remove-btn" data-idx="' + idx + '" aria-label="Remove">&times;</button></td>' +
@@ -280,6 +280,20 @@
     root.querySelectorAll('.cart-qty-input').forEach(function (input) {
       input.addEventListener('change', function () {
         window.ImplanciaCart.updateQty(parseInt(input.getAttribute('data-idx'), 10), input.value);
+      });
+    });
+
+    // Qty +/- stepper buttons
+    root.querySelectorAll('.cart-qty-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var idx = parseInt(btn.getAttribute('data-idx'), 10);
+        var currentItems = window.ImplanciaCart.getItems();
+        var current = currentItems[idx];
+        if (!current) return;
+        var floor = Math.max(1, parseInt(current.moq, 10) || 1);
+        var qty = parseInt(current.qty, 10) || floor;
+        qty = btn.getAttribute('data-action') === 'increase' ? qty + 1 : Math.max(floor, qty - 1);
+        window.ImplanciaCart.updateQty(idx, qty);
       });
     });
 

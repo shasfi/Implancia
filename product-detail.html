@@ -369,7 +369,7 @@ const PRODUCT_DETAIL_CONTENT = {
     badge: 'New',
     images: [
       'products/3_Cannulated Herbert Screws titanium Quality/Cannulated Herbert Screws 2.webp',
-      'products/3_Cannulated Herbert Screws titanium Quality/Cannulated Herbert Screws 1.webp'
+      'products/3_Cannulated Herbert Screws titanium Quality/Cannulated Herbert Screws 1 (2).webp'
     ],
     description: 'Precision-engineered cannulated Herbert screws for scaphoid fracture fixation and small joint arthrodesis. Made from medical-grade titanium (Ti-6Al-4V) with a cannulated design for precise guidewire placement. The unique headless compression design provides excellent interfragmentary compression. Choose your diameter and length below to see live pricing update instantly.',
     specs: [
@@ -722,7 +722,7 @@ const PRODUCT_DETAIL_CONTENT = {
     badge: 'Bulk Order',
     optionLabels: { material: 'Material', diameter: 'Diameter', option3: 'Holes', option4: 'Side' },
     images: [
-      'products/13_2.7mm LCP Distal Radius Volar Variable Left_Right side  2-5 Holes Plates/2.7mm LCP Distal Radius Volar Variable Left_Right side  2-5 Holes Plates 1.webp',
+      'products/13_2.7mm LCP Distal Radius Volar Variable Left_Right side  2-5 Holes Plates/2.7mm LCP Distal Radius Volar Variable Left_Right side  2-5 Holes Plates 2.webp',
       'products/13_2.7mm LCP Distal Radius Volar Variable Left_Right side  2-5 Holes Plates/2.7mm LCP Distal Radius Volar Variable Left_Right side  2-5 Holes Plates 2.webp'
     ],
     description: 'Variable-angle 2.7mm locking compression plate (LCP) for volar distal radius fixation, available Left and Right in a 2 to 5 hole distal row range. Variable-angle locking holes allow surgeon-directed screw trajectory for optimal subchondral support. Manufactured in stainless steel 316L or titanium to ISO 13485 standards. Minimum order quantity: 10 per configuration.',
@@ -975,7 +975,7 @@ const PRODUCT_DETAIL_CONTENT = {
     optionLabels: { material: 'Material', diameter: 'Diameter', option3: 'Length', option4: 'Packaging' },
     images: [
       'products/21_f Cancellous Cannulated Screws Half Thread/Cancellous Cannulated Screws Half Thread.png 3.webp',
-      'products/21_f Cancellous Cannulated Screws Half Thread/Cancellous Cannulated Screws Half Thread.webp',
+      'products/21_f Cancellous Cannulated Screws Half Thread/Cancellous Cannulated Screws Half Thread.png 2.webp',
       'products/21_f Cancellous Cannulated Screws Half Thread/Cancellous Cannulated Screws Half Thread.png 2.webp',
     ],
     description: 'Manufacturer-direct cancellous cannulated screw available in Full Thread and Half Thread configurations for interfragmentary compression in cancellous bone. Supplied in 4.0mm, 4.5mm, 6.5mm, and 7.3mm diameters with diameter-specific length ranges from 10mm to 130mm, in 316L stainless steel or Ti-6Al-4V titanium, manufactured to ISO 13485. Cannulated design allows precise guidewire-assisted placement. Select material, diameter, length, and thread type below for instant per-unit pricing in USD and PKR.',
@@ -1495,7 +1495,7 @@ const MANUFACTURING_VIDEO = 'video/implancia manufacturing view.mp4';
           '<div id="pd-video-box" class="product-video" hidden></div>' +
           '<div class="quantity-row">' +
             '<label for="qty-' + productId + '">Order Quantity</label>' +
-            '<input type="number" id="qty-' + productId + '" class="qty-input" min="' + (product.moq || 200) + '" step="' + (product.moq && product.moq < 50 ? product.moq : 50) + '" value="' + (product.moq || 200) + '">' +
+            '<input type="number" id="qty-' + productId + '" class="qty-input" min="' + (product.moq || 200) + '" step="1" value="' + (product.moq || 200) + '">' +
             '<span class="quantity-note" data-qty-note-for="' + productId + '">' + (product.moq || 200) + ' Minimum per Order</span>' +
           '</div>' +
           '<button type="button" class="btn btn-primary pd-add-to-cart add-to-cart-btn" data-product-id="' + productId + '" data-product-name="' + product.name + '" data-image="' + product.images[0] + '" data-weight="' + (product.shippingWeightKg || 0.006) + '">+ Add to Cart</button>' +

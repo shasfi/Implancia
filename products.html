@@ -915,7 +915,7 @@
 
 <article class="product-card card-clickable" data-category="orthopedics titanium stainless-steel plates" data-price="15" data-name="2.7mm LCP Distal Radius Volar Plate" data-href="product-detail.html?id=lcp-distal-radius-volar-plate-2-7mm" tabindex="0" role="link" aria-label="View 2.7mm LCP Distal Radius Volar Plate details">
           <div class="product-thumb">
-            <img loading="lazy" src="products/13_2.7mm LCP Distal Radius Volar Variable Left_Right side  2-5 Holes Plates/2.7mm LCP Distal Radius Volar Variable Left_Right side  2-5 Holes Plates 1.webp" alt="2.7mm LCP Distal Radius Volar Plate - Orthopedic Locking Plate">
+            <img loading="lazy" src="products/13_2.7mm LCP Distal Radius Volar Variable Left_Right side  2-5 Holes Plates/2.7mm LCP Distal Radius Volar Variable Left_Right side  2-5 Holes Plates 2.webp" alt="2.7mm LCP Distal Radius Volar Plate - Orthopedic Locking Plate">
             <span class="product-badge">Bulk Order</span>
           </div>
           <span class="product-cat">Orthopedics</span>
@@ -924,7 +924,7 @@
           <p class="quantity-badge">10 Quantity</p>
           <div class="card-actions">
             <a href="product-detail.html?id=lcp-distal-radius-volar-plate-2-7mm" class="btn btn-outline btn-sm">View Details</a>
-            <button type="button" class="btn btn-primary btn-sm add-to-cart-btn" data-product-id="lcp-distal-radius-volar-plate-2-7mm" data-product-name="2.7mm LCP Distal Radius Volar Plate" data-material="Stainless Steel 316L" data-diameter="2 Holes" data-length="Left" data-price="$15.00" data-image="products/13_2.7mm LCP Distal Radius Volar Variable Left_Right side  2-5 Holes Plates/2.7mm LCP Distal Radius Volar Variable Left_Right side  2-5 Holes Plates 1.webp" data-weight="0.016" data-qty="10">+ Add to Cart</button>
+            <button type="button" class="btn btn-primary btn-sm add-to-cart-btn" data-product-id="lcp-distal-radius-volar-plate-2-7mm" data-product-name="2.7mm LCP Distal Radius Volar Plate" data-material="Stainless Steel 316L" data-diameter="2 Holes" data-length="Left" data-price="$15.00" data-image="products/13_2.7mm LCP Distal Radius Volar Variable Left_Right side  2-5 Holes Plates/2.7mm LCP Distal Radius Volar Variable Left_Right side  2-5 Holes Plates 2.webp" data-weight="0.016" data-qty="10">+ Add to Cart</button>
           </div>
         </article>
 
@@ -1330,9 +1330,21 @@
     const addBtn = card.querySelector('.add-to-cart-btn');
     if (!addBtn) return;
 
-    addBtn.setAttribute('data-qty', '1');
+    // Each product card already carries its Minimum Order Quantity in
+    // data-qty (and the "N Quantity" badge). Use that as the floor for
+    // the stepper instead of always starting from 1.
+    const moq = Math.max(1, parseInt(addBtn.getAttribute('data-qty'), 10) || 1);
+    qtyInput.setAttribute('min', moq);
+    qtyInput.setAttribute('step', '1');
+    qtyInput.value = moq;
+    addBtn.setAttribute('data-qty', moq);
+    addBtn.setAttribute('data-moq', moq);
+
+    const noteEl = card.querySelector('.quantity-badge');
+    if (noteEl) noteEl.textContent = moq + ' Minimum per Order';
+
     const syncQty = function () {
-      const qty = Math.max(1, parseInt(qtyInput.value, 10) || 1);
+      const qty = Math.max(moq, parseInt(qtyInput.value, 10) || moq);
       qtyInput.value = qty;
       addBtn.setAttribute('data-qty', qty);
     };
@@ -1343,8 +1355,9 @@
       btn.addEventListener('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
-        const current = parseInt(qtyInput.value, 10) || 1;
-        const next = this.getAttribute('data-action') === 'increase' ? current + 1 : Math.max(1, current - 1);
+        const current = parseInt(qtyInput.value, 10) || moq;
+        // Always step by 1 unit at a time (11, 12, 13...), never jump by the MOQ.
+        const next = this.getAttribute('data-action') === 'increase' ? current + 1 : Math.max(moq, current - 1);
         qtyInput.value = next;
         syncQty();
       });
