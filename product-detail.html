@@ -254,7 +254,7 @@
 <footer class="site-footer">
   <div class="container footer-inner">
     <div class="footer-col footer-col-1">
-      <a href="index.html" class="footer-logo-link" aria-label="Implancia Home"><img loading="lazy" class="footer-logo" src="images/IMPLANCIA-logo-e1763990920113.webp" alt="Implancia Logo" width="240" height="32"></a>
+      <a href="index.html" class="footer-logo-link" aria-label="Implancia Home"><img loading="lazy" class="footer-logo" src="images/implancia-logo.png" alt="Implancia Logo" width="180" height="46"></a>
       <p class="footer-tagline">Premium manufacturer of medical implants and orthopedic screws for surgical excellence.</p>
     </div>
     <div class="footer-col footer-col-2">
@@ -878,11 +878,11 @@ const PRODUCT_DETAIL_CONTENT = {
     badge: 'Best Seller',
     optionLabels: { material: 'Material', diameter: 'Diameter', option3: 'Graft Length', option4: 'Packaging' },
     images: [
-      'products/18_ACL Titanium Screw 7mm, 8mm, 9mm, 10mm, 11mm titanium & Stainless steel quality/ACL screw 9mm.webp',
+      'products/18_ACL Titanium Screw 7mm, 8mm, 9mm, 10mm, 11mm titanium & Stainless steel quality/ACL screw 8mm.webp',
       'products/18_ACL Titanium Screw 7mm, 8mm, 9mm, 10mm, 11mm titanium & Stainless steel quality/ACL screw 7mm.webp',
       'products/18_ACL Titanium Screw 7mm, 8mm, 9mm, 10mm, 11mm titanium & Stainless steel quality/ACL screw 8mm.webp',
       'products/18_ACL Titanium Screw 7mm, 8mm, 9mm, 10mm, 11mm titanium & Stainless steel quality/ACL screw 10mm.webp',
-      'products/18_ACL Titanium Screw 7mm, 8mm, 9mm, 10mm, 11mm titanium & Stainless steel quality/ACL screw 11mm.webp'
+      'products/18_ACL Titanium Screw 7mm, 8mm, 9mm, 10mm, 11mm titanium & Stainless steel quality/ACL screw 10mm.webp'
     ],
     description: 'ACL Titanium Interference Screw (Grade V, Ti-6Al-4V) for secure graft fixation in ACL/PCL reconstruction, available in 7mm to 11mm diameters with 20mm to 35mm lengths. Fully threaded, self-tapping design for reliable tunnel purchase, manufactured to ISO 13485 standards. Select diameter and length below for instant per-unit pricing in USD and PKR.',
     specs: [
@@ -1380,7 +1380,9 @@ const MANUFACTURING_VIDEO = 'video/implancia manufacturing view.mp4';
     document.getElementById('pd-og-title').setAttribute('content', product.name + ' | Implancia');
     document.getElementById('pd-og-desc').setAttribute('content', product.description.slice(0, 155));
     document.getElementById('pd-canonical').setAttribute('href', 'https://implancia.com/product-detail.html?id=' + productId);
-    document.getElementById('pd-breadcrumb-current').textContent = product.name;
+    var pdBreadcrumbCurrentEl = document.getElementById('pd-breadcrumb-current');
+    pdBreadcrumbCurrentEl.textContent = product.name;
+    pdBreadcrumbCurrentEl.title = product.name;
     if (product.categoryLabel) {
       var catLink = document.getElementById('pd-breadcrumb-category');
       var catSep = document.getElementById('pd-breadcrumb-cat-sep');
