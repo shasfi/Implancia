@@ -2448,9 +2448,10 @@ p{margin:0 0 16px;color:var(--color-muted);}
 .partners-track{
   display:flex;
   align-items:center;
-  gap:28px;
+  gap:48px;
   width:max-content;
   animation:partners-scroll 30s linear infinite;
+  padding:0 24px;
 }
 .partners-marquee:hover .partners-track{animation-play-state:paused;}
 .partner-logo{
@@ -2476,15 +2477,18 @@ p{margin:0 0 16px;color:var(--color-muted);}
 }
 .partner-logo-img{
   flex-shrink:0;
-  height:60px;
+  height:50px;
   width:auto;
-  max-width:150px;
+  max-width:120px;
   object-fit:contain;
-  opacity:0.9;
-  transition:opacity .2s ease;
+  opacity:0.85;
+  transition:opacity .2s ease, transform .2s ease;
+  filter:grayscale(20%);
 }
 .partner-logo-img:hover{
   opacity:1;
+  transform:scale(1.05);
+  filter:grayscale(0%);
 }
 @keyframes partners-scroll{
   from{transform:translateX(0);}
