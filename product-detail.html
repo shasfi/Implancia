@@ -120,6 +120,7 @@
 </script>
 
 <!-- Preconnect -->
+<link rel="icon" type="image/png" href="favicon/Implancia Mono favicon.png">
 <link rel="stylesheet" href="css/fonts.min.css">
 <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -272,8 +273,8 @@
     <div class="footer-col footer-col-3">
       <h4 class="footer-heading">Contact</h4>
       <div class="footer-contact">
-        <div class="footer-contact-item">📍 Bd #B-56, Model Town, Link Road, Gujranwala 52250</div>
-        <div class="footer-contact-item">📞 +92 307 3838115</div>
+        <div class="footer-contact-item">📍 123 Medical Plaza, Suite 456, New York 10001</div>
+        <div class="footer-contact-item">📞 +1 555 123 4567</div>
         <div class="footer-contact-item">✉️ implancia2@gmail.com</div>
       </div>
     </div>
@@ -425,7 +426,7 @@ const PRODUCT_DETAIL_CONTENT = {
     indications: 'Indicated for craniomaxillofacial (CMF) fracture fixation, orthognathic surgery, mandibular and midface trauma repair, and fixation of mini/micro CMF plating systems where a small-diameter cross-drive screw is required. Self-drilling screws are used when a pre-drilled pilot hole is not preferred; self-tapping screws are used with a pre-drilled pilot hole for denser cortical bone.',
     compatibleInstruments: ['Cross (Phillips) mini screwdriver', 'Micro drill bit (for self-tapping variant)', 'Depth gauge (mini)', 'CMF mini plate system'],
     tags: ['ISO 13485', 'CMF Implant', 'Craniomaxillofacial', 'Self-Tapping', 'Self-Drilling', 'Mini Screw', 'MRI Safe (Titanium)'],
-    moq: 200,
+    moq: 100,
     shippingWeightKg: 0.002
   },
 
@@ -1516,7 +1517,7 @@ const MANUFACTURING_VIDEO = 'video/implancia manufacturing view.mp4';
             : '') +
           '<div class="product-tags">' + tagsHtml + '</div>' +
           '<div class="product-actions">' +
-            '<a href="#" class="btn btn-outline quote-link whatsapp-cta" data-product-id="' + productId + '" data-product-name="' + product.name + '" target="_blank" rel="noopener">&#128172; Ask on WhatsApp</a>' +
+            '<button type="button" class="btn btn-primary add-to-cart-btn" id="add-to-cart-' + productId + '" data-product-id="' + productId + '" data-product-name="' + product.name + '" target="_blank" rel="noopener">&#128722; Add to Cart</button>' +
           '</div>' +
 
           '<div class="pd-content-block">' +
@@ -1535,6 +1536,44 @@ const MANUFACTURING_VIDEO = 'video/implancia manufacturing view.mp4';
               '<ul>' + instrumentsHtml + '</ul>' +
             '</div>'
           ) : '') +
+
+          '<div class="pd-content-block">' +
+            '<h3>Customer Reviews</h3>' +
+            '<div class="reviews-container">' +
+              '<div class="review-item">' +
+                '<div class="review-header">' +
+                  '<div class="review-rating">★★★★★</div>' +
+                  '<div class="review-author">Dr. Michael Johnson</div>' +
+                  '<div class="review-date">Orthopedic Surgeon, New York</div>' +
+                '</div>' +
+                '<p class="review-text">Exceptional quality and precision. These implants have consistently performed well in our surgeries. Highly recommend for any orthopedic practice.</p>' +
+              '</div>' +
+              '<div class="review-item">' +
+                '<div class="review-header">' +
+                  '<div class="review-rating">★★★★★</div>' +
+                  '<div class="review-author">Sarah Williams</div>' +
+                  '<div class="review-date">Hospital Procurement, California</div>' +
+                '</div>' +
+                '<p class="review-text">Reliable supplier with excellent product consistency. Our hospital has been ordering from Implancia for over a year with zero issues.</p>' +
+              '</div>' +
+              '<div class="review-item">' +
+                '<div class="review-header">' +
+                  '<div class="review-rating">★★★★★</div>' +
+                  '<div class="review-author">Dr. Robert Chen</div>' +
+                  '<div class="review-date">Trauma Specialist, Texas</div>' +
+                '</div>' +
+                '<p class="review-text">Top-grade titanium implants that meet all our surgical requirements. The precision engineering is evident in every piece.</p>' +
+              '</div>' +
+              '<div class="review-item">' +
+                '<div class="review-header">' +
+                  '<div class="review-rating">★★★★★</div>' +
+                  '<div class="review-author">Jennifer Martinez</div>' +
+                  '<div class="review-date">Surgical Center Manager, Florida</div>' +
+                '</div>' +
+                '<p class="review-text">Outstanding customer service and fast delivery. The product quality exceeds expectations. Will continue to be our preferred supplier.</p>' +
+              '</div>' +
+            '</div>' +
+          '</div>' +
 
           '<div class="pd-content-block">' +
             '<h3>Downloads</h3>' +
