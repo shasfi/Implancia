@@ -2490,6 +2490,10 @@ p{margin:0 0 16px;color:var(--color-muted);}
   transform:scale(1.05);
   filter:grayscale(0%);
 }
+.partner-logo-gpc{
+  height:34px;
+  max-width:96px;
+}
 @keyframes partners-scroll{
   from{transform:translateX(0);}
   to{transform:translateX(-50%);}
