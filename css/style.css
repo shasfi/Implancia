@@ -2478,9 +2478,9 @@ p{margin:0 0 16px;color:var(--color-muted);}
 }
 .partner-logo-img{
   flex-shrink:0;
-  height:50px;
+  height:72px;
   width:auto;
-  max-width:120px;
+  max-width:200px;
   object-fit:contain;
   opacity:0.85;
   transition:opacity .2s ease, transform .2s ease;
@@ -2492,8 +2492,8 @@ p{margin:0 0 16px;color:var(--color-muted);}
   filter:grayscale(0%);
 }
 .partner-logo-gpc{
-  height:26px;
-  max-width:72px;
+  height:44px;
+  max-width:108px;
 }
 @keyframes partners-scroll{
   from{transform:translateX(0);}
@@ -2538,7 +2538,7 @@ p{margin:0 0 16px;color:var(--color-muted);}
 }
 .review-author{
   font-weight:600;
-  color:var(--color-ink);
+  color:var(--color-navy);
   font-size:0.95rem;
 }
 .review-date{
@@ -2547,7 +2547,7 @@ p{margin:0 0 16px;color:var(--color-muted);}
   margin-left:auto;
 }
 .review-text{
-  color:var(--color-ink);
+  color:var(--color-text);
   line-height:1.6;
   font-size:0.95rem;
   margin:0;
