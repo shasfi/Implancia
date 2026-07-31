@@ -2127,11 +2127,12 @@ p{margin:0 0 16px;color:var(--color-muted);}
 }
 .whatsapp-checkout-btn{
   width:100%;margin-top:18px;display:flex;align-items:center;justify-content:center;
-  gap:10px;background:#25D366;color:#fff;border:none;border-radius:50px;
+  gap:10px;background:linear-gradient(135deg, #1a4fb0 0%, #2563c7 45%, #3b82e0 100%);color:#fff;border:none;border-radius:50px;
   padding:15px 20px;font-family:'Outfit',sans-serif;font-weight:600;font-size:1rem;
   cursor:pointer;text-decoration:none;transition:background .2s ease,transform .15s ease;
+  box-shadow:0 4px 15px rgba(8,106,254,0.2);
 }
-.whatsapp-checkout-btn:hover{background:#1ebe5b;transform:translateY(-1px);}
+.whatsapp-checkout-btn:hover{background:linear-gradient(135deg, #2563c7 0%, #3b82e0 45%, #6faee8 100%);transform:translateY(-1px);}
 .whatsapp-checkout-btn svg{flex-shrink:0;}
 .checkout-note{font-size:0.78rem;color:var(--color-muted);text-align:center;margin-top:10px;}
 .checkout-box .field-error{color:#d33;font-size:0.78rem;margin-top:4px;display:none;}
