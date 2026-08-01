@@ -1311,14 +1311,14 @@ p{margin:0 0 16px;color:var(--color-muted);}
     left:0;
     right:0;
     background:var(--color-surface);
-    border-bottom:1px solid var(--color-border);
+    border-bottom:1px solid transparent;
     max-height:0;
     overflow-y:auto;
     -webkit-overflow-scrolling:touch;
     transition:max-height .3s ease;
     z-index:60;
   }
-  .main-nav.open{max-height:calc(100vh - 78px);}
+  .main-nav.open{max-height:calc(100vh - 78px);border-bottom-color:var(--color-border);}
   .main-nav ul{flex-direction:column;align-items:flex-start;padding:20px 24px;gap:16px;}
   .dropdown{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;display:none;padding-left:12px;}
   .has-dropdown.open .dropdown{display:flex;}
@@ -1397,6 +1397,19 @@ p{margin:0 0 16px;color:var(--color-muted);}
   }
   .breadcrumb a{
     text-decoration:underline;
+  }
+  /* On narrow screens the overlapping radial-gradients in --hero-bg create
+     a visible seam line and wash out the breadcrumb text. Use a single
+     clean top-to-bottom gradient instead — no seams, and deeper blue
+     towards the bottom for contrast. */
+  .page-hero,
+  .page-header{
+    background:linear-gradient(180deg, #eef5fc 0%, #8fc1ef 100%);
+  }
+  /* The sticky header's box-shadow shows up as a hard line against the
+     light gradient right below it — drop it on mobile. */
+  .site-header{
+    box-shadow:none;
   }
 }
 .page-title{
