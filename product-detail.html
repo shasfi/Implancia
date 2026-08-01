@@ -1760,6 +1760,7 @@ const MANUFACTURING_VIDEO = 'video/implancia manufacturing view.mp4';
             '<label for="qty-' + productId + '">Order Quantity</label>' +
             '<input type="number" id="qty-' + productId + '" class="qty-input" min="' + (product.moq || 200) + '" step="1" value="' + (product.moq || 200) + '">' +
             '<span class="quantity-note" data-qty-note-for="' + productId + '">' + (product.moq || 200) + ' Minimum per Order</span>' +
+            '<span class="quantity-error-msg" id="qty-error-' + productId + '" role="alert"></span>' +
           '</div>' +
           '<a href="https://wa.me/923073838115?text=' + encodeURIComponent('Hello Implancia, I would like to ask a quote for: ' + product.name) + '" class="btn btn-primary pd-add-to-cart" target="_blank" rel="noopener" style="text-align:center;text-decoration:none;">&#128222; Ask a Quote on WhatsApp</a>' +
         '</div>' +

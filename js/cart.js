@@ -178,8 +178,11 @@
         '<div class="cart-drawer-item">' +
           '<div class="cart-drawer-item-info">' +
             '<strong>' + escapeHtml(item.name) + '</strong>' +
-            '<span>' + [item.material, item.diameter, item.length, item.option4].filter(Boolean).map(escapeHtml).join(' &middot; ') + '</span>' +
-            '<span>Qty: ' + item.qty + (item.price ? ' &middot; ' + escapeHtml(item.price) : '') + '</span>' +
+            '<span class="cart-drawer-item-meta">' + [item.material, item.diameter, item.length, item.option4].filter(Boolean).map(escapeHtml).join(' &middot; ') + '</span>' +
+            '<div class="cart-drawer-item-details">' +
+              '<span class="cart-drawer-item-qty">Qty: ' + item.qty + '</span>' +
+              (item.price ? '<span class="cart-drawer-item-price">' + escapeHtml(item.price) + '</span>' : '') +
+            '</div>' +
           '</div>' +
           '<button type="button" class="cart-drawer-remove" data-idx="' + idx + '" aria-label="Remove item">&times;</button>' +
         '</div>'

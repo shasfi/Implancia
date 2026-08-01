@@ -5521,13 +5521,42 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     var qtyInput = document.getElementById('qty-' + productId);
+    var qtyErrorEl = document.getElementById('qty-error-' + productId);
     var priceTotalEl = document.getElementById('price-total-' + productId);
     var moq = (typeof PRODUCT_DETAIL_CONTENT !== 'undefined' && PRODUCT_DETAIL_CONTENT[productId] && PRODUCT_DETAIL_CONTENT[productId].moq) || 200;
 
-    function currentQty() {
+    // Returns the raw typed quantity (not clamped) so callers can tell
+    // whether the visitor is currently below the minimum order quantity.
+    function rawQty() {
       var q = parseInt(qtyInput ? qtyInput.value : moq, 10);
-      if (isNaN(q) || q < moq) q = moq;
+      return isNaN(q) ? moq : q;
+    }
+
+    // Value actually used for pricing/cart — never below MOQ.
+    function currentQty() {
+      var q = rawQty();
+      if (q < moq) q = moq;
       return q;
+    }
+
+    // Shows/hides a professional inline error instead of silently
+    // snapping the typed value back up to the MOQ.
+    function validateQty() {
+      if (!qtyInput) return true;
+      var q = rawQty();
+      var belowMoq = q < moq;
+      qtyInput.classList.toggle('qty-input-error', belowMoq);
+      qtyInput.setAttribute('aria-invalid', belowMoq ? 'true' : 'false');
+      if (qtyErrorEl) {
+        if (belowMoq) {
+          qtyErrorEl.textContent = 'Minimum order quantity is ' + moq + ' — please increase the quantity to continue.';
+          qtyErrorEl.classList.add('visible');
+        } else {
+          qtyErrorEl.textContent = '';
+          qtyErrorEl.classList.remove('visible');
+        }
+      }
+      return !belowMoq;
     }
 
     function updatePrice() {
@@ -5585,6 +5614,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
 
       // Keep the "Add to Cart" button in sync with the selected options + qty
+      var isQtyValid = validateQty();
       var addToCartBtn = document.querySelector('.add-to-cart-btn[data-product-id="' + productId + '"]');
       if (addToCartBtn) {
         addToCartBtn.setAttribute('data-material', materialLabel);
@@ -5594,8 +5624,8 @@ document.addEventListener('DOMContentLoaded', function () {
         addToCartBtn.setAttribute('data-price', hasAllSelection ? 'Request Quote' : '$' + unitPrice.toFixed(2));
         addToCartBtn.setAttribute('data-qty', qty);
         addToCartBtn.setAttribute('data-moq', moq);
-        addToCartBtn.disabled = false;
-        addToCartBtn.textContent = '+ Add to Cart';
+        addToCartBtn.disabled = !isQtyValid;
+        addToCartBtn.textContent = isQtyValid ? '+ Add to Cart' : 'Increase Quantity to ' + moq;
       }
     }
 
@@ -5607,8 +5637,11 @@ document.addEventListener('DOMContentLoaded', function () {
       qtyInput.value = moq;
       var noteEl = document.querySelector('.quantity-note[data-qty-note-for="' + productId + '"]');
       if (noteEl) noteEl.textContent = moq + ' Minimum per Order';
+      // Only snap the field back up to the MOQ once the visitor leaves it
+      // (blur/change) — while they're actively typing, show the error
+      // message instead of fighting their keystrokes.
       qtyInput.addEventListener('change', function () {
-        qtyInput.value = currentQty();
+        if (rawQty() < moq) qtyInput.value = moq;
         updatePrice();
       });
       qtyInput.addEventListener('input', updatePrice);
