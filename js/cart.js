@@ -105,7 +105,8 @@
   function injectHeaderButton() {
     var path = window.location.pathname.split('/').pop() || 'index.html';
     var cartRelevantPages = ['products.html', 'product-detail.html', 'cart.html'];
-    if (cartRelevantPages.indexOf(path) === -1) return;
+    var isProductPage = !!document.getElementById('pd-root');
+    if (cartRelevantPages.indexOf(path) === -1 && !isProductPage) return;
 
     var cta = document.querySelector('.header-cta');
     var headerActions = document.getElementById('headerActions');
