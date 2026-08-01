@@ -1311,22 +1311,29 @@ p{margin:0 0 16px;color:var(--color-muted);}
     left:0;
     right:0;
     background:var(--color-surface);
-    border-bottom:1px solid transparent;
+    border-bottom:0;
     max-height:0;
     overflow-y:auto;
     -webkit-overflow-scrolling:touch;
     transition:max-height .3s ease;
     z-index:60;
   }
-  .main-nav.open{max-height:calc(100vh - 78px);border-bottom-color:var(--color-border);}
+  /* Border only shows once the menu is open. While closed, max-height:0
+     still left a transparent border-bottom rendered against the header's
+     white background beneath it, which read as a thin line stuck under
+     the header (since the nav is position:fixed it stayed in place while
+     the page scrolled). border-bottom:0 by default removes that line. */
+  .main-nav.open{max-height:calc(100vh - 78px);border-bottom:1px solid var(--color-border);}
   .main-nav ul{flex-direction:column;align-items:flex-start;padding:20px 24px;gap:16px;}
   .dropdown{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;display:none;padding-left:12px;}
   .has-dropdown.open .dropdown{display:flex;}
   .has-dropdown.open .dropdown li,
   .dropdown li{opacity:1;transform:none;}
-  .header-cta{font-size:0.8rem;padding:8px 14px;}
-  .nav-toggle{display:flex;}
-  .header-actions{display:flex;align-items:center;gap:10px;}
+  .header-inner{gap:14px;}
+  .header-logo{max-width:150px;}
+  .header-cta{font-size:0.8rem;padding:8px 14px;flex-shrink:0;}
+  .nav-toggle{display:flex;flex-shrink:0;}
+  .header-actions{display:flex;align-items:center;gap:8px;flex-shrink:0;}
   .theme-toggle{margin-right:0;}
   .cart-list-btn{margin-right:0;}
   .solutions-grid{grid-template-columns:1fr;}
@@ -1345,13 +1352,28 @@ p{margin:0 0 16px;color:var(--color-muted);}
   .page-header{padding:52px 0;}
   .btn{padding:11px 22px;font-size:0.88rem;}
   .container{padding:0 18px;}
+  .header-inner{gap:8px;}
+  .header-logo{max-width:120px;}
+  .header-cta{padding:7px 10px;font-size:0.72rem;}
+  .header-actions{gap:5px;}
+  .theme-toggle{margin-right:0;}
+  .theme-toggle-trigger{padding:6px 8px;gap:0;}
+  .theme-toggle-trigger .theme-toggle-caret{display:none;}
+  .cart-list-btn{padding:7px 9px;}
+  .nav-toggle{padding:6px;}
 }
 
 @media (max-width:380px){
   .logo-text{font-size:1.4rem;}
   .hero h1{font-size:1.6rem;}
   .section-title{font-size:1.5rem;}
-  .header-cta{display:none;}
+  .header-logo{max-width:96px;}
+  .header-inner{gap:6px;}
+  .header-cta{padding:6px 8px;font-size:0.64rem;}
+  .header-actions{gap:3px;}
+  .theme-toggle-trigger{padding:5px 6px;}
+  .cart-list-btn{padding:5px 7px;}
+  .nav-toggle{padding:5px;}
 }
 
 /* =========================================================
