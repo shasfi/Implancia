@@ -451,6 +451,12 @@ p{margin:0 0 16px;color:var(--color-muted);}
   transition:color .2s ease, border-color .2s ease, padding-left .2s ease;
 }
 .megamenu-sub-links a:hover{color:var(--color-primary);border-left-color:var(--color-primary);padding-left:14px;}
+.megamenu-sub-links a.nested{
+  padding-left:22px;
+  font-size:clamp(0.72rem, 0.64rem + 0.32vw, 0.84rem);
+  opacity:0.85;
+}
+.megamenu-sub-links a.nested:hover{padding-left:26px;opacity:1;}
 
 @media (max-width:900px){
   .megamenu{position:static;display:none;flex-direction:column;opacity:1;visibility:visible;transform:none;box-shadow:none;border:none;min-width:0;background:var(--color-bg-alt);border-radius:8px;margin-top:8px;overflow:hidden;}
@@ -1745,7 +1751,6 @@ p{margin:0 0 16px;color:var(--color-muted);}
   form[style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr !important;gap:16px !important;}
 }
   .faq-item{padding:18px;}
-}
 
 /* =========================================================
    PRODUCT OPTIONS (Type / Diameter / Length) + LIVE PRICE
