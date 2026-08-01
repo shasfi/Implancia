@@ -5467,7 +5467,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var option4Select = document.getElementById('option4-' + productId);
     var priceEl = document.getElementById('price-' + productId);
 
-    if (!materialSelect || !diameterSelect || !option3Select || !option4Select || !priceEl) {
+    if (!materialSelect || !diameterSelect || !option3Select || !priceEl) {
       return; // this product isn't on the current page
     }
 
@@ -5496,7 +5496,7 @@ document.addEventListener('DOMContentLoaded', function () {
     populateSelect(materialSelect, data.material);
     populateSelect(diameterSelect, data.diameter);
     populateSelect(option3Select, getLengthOptionsFor(diameterSelect.value));
-    populateSelect(option4Select, data.option4);
+    if (option4Select) populateSelect(option4Select, data.option4);
 
     // When the diameter changes on a product with diameter-dependent lengths,
     // rebuild the Length dropdown to only show valid lengths for that diameter.
@@ -5561,13 +5561,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function updatePrice() {
       var currentLengthOptions = getLengthOptionsFor(diameterSelect.value);
-      var hasAllSelection = [materialSelect.value, diameterSelect.value, option3Select.value, option4Select.value].indexOf('all') !== -1;
+      var hasAllSelection = [materialSelect.value, diameterSelect.value, option3Select.value, (option4Select ? option4Select.value : null)].indexOf('all') !== -1;
 
       var unitPrice = data.basePrice
         + findModifier(data.material, materialSelect.value)
         + findModifier(data.diameter, diameterSelect.value)
         + findModifier(currentLengthOptions, option3Select.value)
-        + findModifier(data.option4, option4Select.value);
+        + (option4Select ? findModifier(data.option4, option4Select.value) : 0);
 
       var qty = currentQty();
       var total = unitPrice * qty;
@@ -5592,11 +5592,11 @@ document.addEventListener('DOMContentLoaded', function () {
       var selectedMaterial = (data.material || []).filter(function (o) { return o.value === materialSelect.value; })[0];
       var selectedDiameter = (data.diameter || []).filter(function (o) { return o.value === diameterSelect.value; })[0];
       var selectedOption3 = (currentLengthOptions || []).filter(function (o) { return o.value === option3Select.value; })[0];
-      var selectedOption4 = (data.option4 || []).filter(function (o) { return o.value === option4Select.value; })[0];
+      var selectedOption4 = option4Select ? (data.option4 || []).filter(function (o) { return o.value === option4Select.value; })[0] : null;
       var materialLabel = selectedMaterial ? selectedMaterial.label : materialSelect.value;
       var diameterLabel = selectedDiameter ? selectedDiameter.label : diameterSelect.value;
       var option3Label = selectedOption3 ? selectedOption3.label : option3Select.value;
-      var option4Label = selectedOption4 ? selectedOption4.label : option4Select.value;
+      var option4Label = option4Select ? (selectedOption4 ? selectedOption4.label : option4Select.value) : '';
 
       // Keep the WhatsApp "Ask on WhatsApp" link in sync with the selected options + qty
       var quoteLink = document.querySelector('.quote-link[data-product-id="' + productId + '"]');
@@ -5629,7 +5629,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
 
-    [materialSelect, option3Select, option4Select].forEach(function (sel) {
+    [materialSelect, option3Select].concat(option4Select ? [option4Select] : []).forEach(function (sel) {
       sel.addEventListener('change', updatePrice);
     });
     if (qtyInput) {
