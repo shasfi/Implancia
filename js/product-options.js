@@ -4548,7 +4548,910 @@ const PRODUCTS_PRICING = {
         "modifier": 0
       }
     ]
-  }
+  },
+
+  "dhs-barrel-plate-dcp-lcp-135": {
+    "basePrice": 28,
+    "optionLabels": {
+      "material": "Material",
+      "diameter": "Plate Size",
+      "option3": "Holes",
+      "option4": "Angle"
+    },
+    "material": [
+      {
+        "value": "stainless-steel",
+        "label": "Stainless Steel 316L",
+        "modifier": 0
+      },
+      {
+        "value": "titanium",
+        "label": "Titanium (Ti-6Al-4V)",
+        "modifier": 8
+      }
+    ],
+    "diameter": [
+      {
+        "value": "all",
+        "label": "All Plate Sizes",
+        "modifier": 0
+      },
+      {
+        "value": "4.5",
+        "label": "4.5 mm",
+        "modifier": 0
+      },
+      {
+        "value": "5.0",
+        "label": "5.0 mm",
+        "modifier": 3
+      }
+    ],
+    "option3": [
+      {
+        "value": "all",
+        "label": "All Hole Configurations",
+        "modifier": 0
+      },
+      {
+        "value": "3",
+        "label": "3 Holes",
+        "modifier": 0
+      },
+      {
+        "value": "4",
+        "label": "4 Holes",
+        "modifier": 4
+      },
+      {
+        "value": "5",
+        "label": "5 Holes",
+        "modifier": 8
+      },
+      {
+        "value": "6",
+        "label": "6 Holes",
+        "modifier": 12
+      },
+      {
+        "value": "7",
+        "label": "7 Holes",
+        "modifier": 16
+      },
+      {
+        "value": "8",
+        "label": "8 Holes",
+        "modifier": 20
+      },
+      {
+        "value": "9",
+        "label": "9 Holes",
+        "modifier": 24
+      }
+    ],
+    "option4": [
+      {
+        "value": "all",
+        "label": "All Angles",
+        "modifier": 0
+      },
+      {
+        "value": "135",
+        "label": "135°",
+        "modifier": 0
+      }
+    ]
+  },
+
+  "dcp-dynamic-compression-plate-4-5mm": {
+    "basePrice": 18,
+    "optionLabels": {
+      "material": "Material",
+      "diameter": "Diameter",
+      "option3": "Holes",
+      "option4": "Profile"
+    },
+    "material": [
+      {
+        "value": "stainless-steel",
+        "label": "Stainless Steel 316L",
+        "modifier": 0
+      },
+      {
+        "value": "titanium",
+        "label": "Titanium (Ti-6Al-4V)",
+        "modifier": 6
+      }
+    ],
+    "diameter": [
+      {
+        "value": "all",
+        "label": "All Diameters",
+        "modifier": 0
+      },
+      {
+        "value": "2.7",
+        "label": "2.7 mm",
+        "modifier": -6
+      },
+      {
+        "value": "3.5",
+        "label": "3.5 mm",
+        "modifier": -3
+      },
+      {
+        "value": "4.5",
+        "label": "4.5 mm",
+        "modifier": 0
+      }
+    ],
+    "option3": [
+      {
+        "value": "all",
+        "label": "All Hole Configurations",
+        "modifier": 0
+      },
+      {
+        "value": "4",
+        "label": "4 Holes",
+        "modifier": 0
+      },
+      {
+        "value": "5",
+        "label": "5 Holes",
+        "modifier": 2
+      },
+      {
+        "value": "6",
+        "label": "6 Holes",
+        "modifier": 4
+      },
+      {
+        "value": "7",
+        "label": "7 Holes",
+        "modifier": 6
+      },
+      {
+        "value": "8",
+        "label": "8 Holes",
+        "modifier": 8
+      },
+      {
+        "value": "9",
+        "label": "9 Holes",
+        "modifier": 10
+      },
+      {
+        "value": "10",
+        "label": "10 Holes",
+        "modifier": 12
+      },
+      {
+        "value": "12",
+        "label": "12 Holes",
+        "modifier": 16
+      }
+    ],
+    "option4": [
+      {
+        "value": "all",
+        "label": "All Profiles",
+        "modifier": 0
+      },
+      {
+        "value": "narrow",
+        "label": "Narrow",
+        "modifier": 0
+      },
+      {
+        "value": "broad",
+        "label": "Broad",
+        "modifier": 4
+      }
+    ]
+  },
+
+  "tplo-locking-plate-3-5mm-68mm": {
+    "basePrice": 24,
+    "optionLabels": {
+      "material": "Material",
+      "diameter": "Plate Width",
+      "option3": "Side",
+      "option4": "Length"
+    },
+    "material": [
+      {
+        "value": "stainless-steel",
+        "label": "Stainless Steel 316L",
+        "modifier": 0
+      },
+      {
+        "value": "titanium",
+        "label": "Titanium (Ti-6Al-4V)",
+        "modifier": 8
+      }
+    ],
+    "diameter": [
+      {
+        "value": "all",
+        "label": "All Widths",
+        "modifier": 0
+      },
+      {
+        "value": "10mm",
+        "label": "10 mm Width",
+        "modifier": 0
+      }
+    ],
+    "option3": [
+      {
+        "value": "all",
+        "label": "All Sides",
+        "modifier": 0
+      },
+      {
+        "value": "left",
+        "label": "Left",
+        "modifier": 0
+      },
+      {
+        "value": "right",
+        "label": "Right",
+        "modifier": 0
+      }
+    ],
+    "option4": [
+      {
+        "value": "all",
+        "label": "All Lengths",
+        "modifier": 0
+      },
+      {
+        "value": "68mm",
+        "label": "68 mm Length",
+        "modifier": 0
+      }
+    ]
+  },
+
+  "headless-compression-screws-2-5-6-5mm": {
+    "basePrice": 4.99,
+    "optionLabels": {
+      "material": "Material",
+      "diameter": "Diameter",
+      "option3": "Length",
+      "option4": "Thread Type"
+    },
+    "material": [
+      {
+        "value": "titanium",
+        "label": "Titanium (Ti-6Al-4V)",
+        "modifier": 0
+      },
+      {
+        "value": "stainless-steel",
+        "label": "Stainless Steel 316L",
+        "modifier": -1
+      }
+    ],
+    "diameter": [
+      {
+        "value": "all",
+        "label": "All Diameters",
+        "modifier": 0
+      },
+      {
+        "value": "2.5",
+        "label": "2.5 mm",
+        "modifier": 0,
+        "lengths": [
+          {
+            "value": "all",
+            "label": "All Lengths",
+            "modifier": 0
+          },
+          {
+            "value": "8",
+            "label": "8 mm",
+            "modifier": 0
+          },
+          {
+            "value": "10",
+            "label": "10 mm",
+            "modifier": 0
+          },
+          {
+            "value": "12",
+            "label": "12 mm",
+            "modifier": 0
+          },
+          {
+            "value": "14",
+            "label": "14 mm",
+            "modifier": 0
+          },
+          {
+            "value": "16",
+            "label": "16 mm",
+            "modifier": 0
+          },
+          {
+            "value": "18",
+            "label": "18 mm",
+            "modifier": 0
+          },
+          {
+            "value": "20",
+            "label": "20 mm",
+            "modifier": 0
+          },
+          {
+            "value": "22",
+            "label": "22 mm",
+            "modifier": 0
+          },
+          {
+            "value": "24",
+            "label": "24 mm",
+            "modifier": 0
+          },
+          {
+            "value": "26",
+            "label": "26 mm",
+            "modifier": 0
+          },
+          {
+            "value": "28",
+            "label": "28 mm",
+            "modifier": 0
+          },
+          {
+            "value": "30",
+            "label": "30 mm",
+            "modifier": 0
+          },
+          {
+            "value": "32",
+            "label": "32 mm",
+            "modifier": 0
+          },
+          {
+            "value": "34",
+            "label": "34 mm",
+            "modifier": 0
+          },
+          {
+            "value": "36",
+            "label": "36 mm",
+            "modifier": 0
+          },
+          {
+            "value": "38",
+            "label": "38 mm",
+            "modifier": 0
+          },
+          {
+            "value": "40",
+            "label": "40 mm",
+            "modifier": 0
+          }
+        ]
+      },
+      {
+        "value": "3.5",
+        "label": "3.5 mm",
+        "modifier": 1,
+        "lengths": [
+          {
+            "value": "all",
+            "label": "All Lengths",
+            "modifier": 0
+          },
+          {
+            "value": "14",
+            "label": "14 mm",
+            "modifier": 0
+          },
+          {
+            "value": "16",
+            "label": "16 mm",
+            "modifier": 0
+          },
+          {
+            "value": "18",
+            "label": "18 mm",
+            "modifier": 0
+          },
+          {
+            "value": "20",
+            "label": "20 mm",
+            "modifier": 0
+          },
+          {
+            "value": "22",
+            "label": "22 mm",
+            "modifier": 0
+          },
+          {
+            "value": "24",
+            "label": "24 mm",
+            "modifier": 0
+          },
+          {
+            "value": "26",
+            "label": "26 mm",
+            "modifier": 0
+          },
+          {
+            "value": "28",
+            "label": "28 mm",
+            "modifier": 0
+          },
+          {
+            "value": "30",
+            "label": "30 mm",
+            "modifier": 0
+          },
+          {
+            "value": "32",
+            "label": "32 mm",
+            "modifier": 0
+          },
+          {
+            "value": "34",
+            "label": "34 mm",
+            "modifier": 0
+          },
+          {
+            "value": "36",
+            "label": "36 mm",
+            "modifier": 0
+          },
+          {
+            "value": "38",
+            "label": "38 mm",
+            "modifier": 0
+          },
+          {
+            "value": "40",
+            "label": "40 mm",
+            "modifier": 0
+          },
+          {
+            "value": "45",
+            "label": "45 mm",
+            "modifier": 2
+          },
+          {
+            "value": "50",
+            "label": "50 mm",
+            "modifier": 4
+          }
+        ]
+      },
+      {
+        "value": "4.5",
+        "label": "4.5 mm",
+        "modifier": 2,
+        "lengths": [
+          {
+            "value": "all",
+            "label": "All Lengths",
+            "modifier": 0
+          },
+          {
+            "value": "16",
+            "label": "16 mm",
+            "modifier": 0
+          },
+          {
+            "value": "18",
+            "label": "18 mm",
+            "modifier": 0
+          },
+          {
+            "value": "20",
+            "label": "20 mm",
+            "modifier": 0
+          },
+          {
+            "value": "22",
+            "label": "22 mm",
+            "modifier": 0
+          },
+          {
+            "value": "24",
+            "label": "24 mm",
+            "modifier": 0
+          },
+          {
+            "value": "26",
+            "label": "26 mm",
+            "modifier": 0
+          },
+          {
+            "value": "28",
+            "label": "28 mm",
+            "modifier": 0
+          },
+          {
+            "value": "30",
+            "label": "30 mm",
+            "modifier": 0
+          },
+          {
+            "value": "32",
+            "label": "32 mm",
+            "modifier": 0
+          },
+          {
+            "value": "34",
+            "label": "34 mm",
+            "modifier": 0
+          },
+          {
+            "value": "36",
+            "label": "36 mm",
+            "modifier": 0
+          },
+          {
+            "value": "38",
+            "label": "38 mm",
+            "modifier": 0
+          },
+          {
+            "value": "40",
+            "label": "40 mm",
+            "modifier": 0
+          },
+          {
+            "value": "45",
+            "label": "45 mm",
+            "modifier": 2
+          },
+          {
+            "value": "50",
+            "label": "50 mm",
+            "modifier": 4
+          },
+          {
+            "value": "55",
+            "label": "55 mm",
+            "modifier": 6
+          },
+          {
+            "value": "60",
+            "label": "60 mm",
+            "modifier": 8
+          },
+          {
+            "value": "70",
+            "label": "70 mm",
+            "modifier": 12
+          },
+          {
+            "value": "80",
+            "label": "80 mm",
+            "modifier": 16
+          },
+          {
+            "value": "90",
+            "label": "90 mm",
+            "modifier": 20
+          },
+          {
+            "value": "100",
+            "label": "100 mm",
+            "modifier": 24
+          },
+          {
+            "value": "110",
+            "label": "110 mm",
+            "modifier": 28
+          }
+        ]
+      },
+      {
+        "value": "6.5",
+        "label": "6.5 mm",
+        "modifier": 4,
+        "lengths": [
+          {
+            "value": "all",
+            "label": "All Lengths",
+            "modifier": 0
+          },
+          {
+            "value": "30",
+            "label": "30 mm",
+            "modifier": 0
+          },
+          {
+            "value": "35",
+            "label": "35 mm",
+            "modifier": 0
+          },
+          {
+            "value": "40",
+            "label": "40 mm",
+            "modifier": 0
+          },
+          {
+            "value": "45",
+            "label": "45 mm",
+            "modifier": 0
+          },
+          {
+            "value": "50",
+            "label": "50 mm",
+            "modifier": 0
+          },
+          {
+            "value": "55",
+            "label": "55 mm",
+            "modifier": 2
+          },
+          {
+            "value": "60",
+            "label": "60 mm",
+            "modifier": 4
+          },
+          {
+            "value": "65",
+            "label": "65 mm",
+            "modifier": 6
+          },
+          {
+            "value": "70",
+            "label": "70 mm",
+            "modifier": 8
+          },
+          {
+            "value": "75",
+            "label": "75 mm",
+            "modifier": 10
+          },
+          {
+            "value": "80",
+            "label": "80 mm",
+            "modifier": 12
+          },
+          {
+            "value": "85",
+            "label": "85 mm",
+            "modifier": 14
+          },
+          {
+            "value": "90",
+            "label": "90 mm",
+            "modifier": 16
+          },
+          {
+            "value": "95",
+            "label": "95 mm",
+            "modifier": 18
+          },
+          {
+            "value": "100",
+            "label": "100 mm",
+            "modifier": 20
+          },
+          {
+            "value": "105",
+            "label": "105 mm",
+            "modifier": 22
+          },
+          {
+            "value": "110",
+            "label": "110 mm",
+            "modifier": 24
+          },
+          {
+            "value": "115",
+            "label": "115 mm",
+            "modifier": 26
+          },
+          {
+            "value": "120",
+            "label": "120 mm",
+            "modifier": 24
+          }
+        ]
+      }
+    ],
+    "option3": [],
+    "option4": [
+      {
+        "value": "all",
+        "label": "All Thread Types",
+        "modifier": 0
+      },
+      {
+        "value": "full-thread",
+        "label": "Full Thread",
+        "modifier": 0
+      },
+      {
+        "value": "partial-thread",
+        "label": "Partial Thread",
+        "modifier": 0
+      }
+    ]
+  },
+
+  "tplo-lc-dcp-plate-3-5mm-lr": {
+    "basePrice": 22,
+    "optionLabels": {
+      "material": "Material",
+      "diameter": "Diameter",
+      "option3": "Side",
+      "option4": "Holes"
+    },
+    "material": [
+      {
+        "value": "stainless-steel",
+        "label": "Stainless Steel 316L",
+        "modifier": 0
+      },
+      {
+        "value": "titanium",
+        "label": "Titanium (Ti-6Al-4V)",
+        "modifier": 7
+      }
+    ],
+    "diameter": [
+      {
+        "value": "all",
+        "label": "All Diameters",
+        "modifier": 0
+      },
+      {
+        "value": "3.5",
+        "label": "3.5 mm",
+        "modifier": 0
+      },
+      {
+        "value": "2.7",
+        "label": "2.7 mm",
+        "modifier": -2
+      }
+    ],
+    "option3": [
+      {
+        "value": "all",
+        "label": "All Sides",
+        "modifier": 0
+      },
+      {
+        "value": "left",
+        "label": "Left",
+        "modifier": 0
+      },
+      {
+        "value": "right",
+        "label": "Right",
+        "modifier": 0
+      }
+    ],
+    "option4": [
+      {
+        "value": "all",
+        "label": "All Hole Configurations",
+        "modifier": 0
+      },
+      {
+        "value": "6",
+        "label": "6 Holes",
+        "modifier": 0
+      }
+    ]
+  },
+
+  "heavy-duty-pin-wire-cutter-18cm": {
+    "basePrice": 85,
+    "optionLabels": {
+      "material": "Material",
+      "diameter": "Length",
+      "option3": "Type",
+      "option4": "Cutting Capacity"
+    },
+    "material": [
+      {
+        "value": "stainless-steel",
+        "label": "Surgical Stainless Steel",
+        "modifier": 0
+      }
+    ],
+    "diameter": [
+      {
+        "value": "all",
+        "label": "All Lengths",
+        "modifier": 0
+      },
+      {
+        "value": "18cm",
+        "label": "18 cm",
+        "modifier": 0
+      }
+    ],
+    "option3": [
+      {
+        "value": "all",
+        "label": "All Types",
+        "modifier": 0
+      },
+      {
+        "value": "double-action",
+        "label": "Double Action",
+        "modifier": 0
+      }
+    ],
+    "option4": [
+      {
+        "value": "all",
+        "label": "All Capacities",
+        "modifier": 0
+      },
+      {
+        "value": "1.6mm",
+        "label": "Up to 1.6mm",
+        "modifier": 0
+      }
+    ]
+  },
+
+  "screwdriver-2-4-2-7-silicon-handle": {
+    "basePrice": 75,
+    "optionLabels": {
+      "material": "Material",
+      "diameter": "Tip Size",
+      "option3": "Handle Type",
+      "option4": "Screw Type"
+    },
+    "material": [
+      {
+        "value": "stainless-steel",
+        "label": "Surgical Stainless Steel",
+        "modifier": 0
+      }
+    ],
+    "diameter": [
+      {
+        "value": "all",
+        "label": "All Tip Sizes",
+        "modifier": 0
+      },
+      {
+        "value": "2.4-2.7",
+        "label": "2.4mm / 2.7mm",
+        "modifier": 0
+      }
+    ],
+    "option3": [
+      {
+        "value": "all",
+        "label": "All Handle Types",
+        "modifier": 0
+      },
+      {
+        "value": "silicon",
+        "label": "Silicon Handle",
+        "modifier": 0
+      }
+    ],
+    "option4": [
+      {
+        "value": "all",
+        "label": "All Screw Types",
+        "modifier": 0
+      },
+      {
+        "value": "tl-tc",
+        "label": "Locking (TL) & Cortical (TC)",
+        "modifier": 0
+      }
+    ]
+  },
 };
 ;
 
